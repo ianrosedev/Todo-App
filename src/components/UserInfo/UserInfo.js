@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Image, Button } from 'semantic-ui-react';
 
 class UserInfo extends Component {
   render() {
     return (
-      <Card
-        image='http://placekitten.com/209/209'
-        header='Elliot'
-        meta='User'
-        description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-      />
+      <Card>
+        <Image src='http://placekitten.com/209/209' />
+        <Card.Content>
+          <Card.Header>Elliot</Card.Header>
+          <Card.Meta>Joined in 2016</Card.Meta>
+          <Card.Description>Work hard, play harder.</Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <Button
+            size='tiny'
+            content='Edit Profile'
+            icon='edit'
+            labelPosition='left'
+          />
+        </Card.Content>
+      </Card>
     );
   }
 }
