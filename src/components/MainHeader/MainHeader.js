@@ -1,12 +1,9 @@
 import React from 'react';
+import './MainHeader.css';
 import { Menu, Icon, Button } from 'semantic-ui-react';
 
-const mainHeaderStyle = {
-  marginBottom: 0
-};
-
 const MainHeader = () => (
-  <Menu borderless style={mainHeaderStyle}>
+  <Menu borderless id='main-header'>
     <Menu.Item header>
       <Icon name='list' />
       Todo List

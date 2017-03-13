@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
+import './MainContent.css';
 
 class MainContent extends Component {
   render() {
-    const mainContentStyle = {
-      float: 'left',
-      margin: 30
-    };
-
     return (
-      <div style={mainContentStyle}>
+      <div id='main-content'>
         <p>Todo: Content Header</p>
         <p>Todo: Task List</p>
       </div>
