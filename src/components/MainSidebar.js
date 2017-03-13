@@ -1,29 +1,19 @@
-import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react'
+import React from 'react';
+import UserInfo from './UserInfo';
 
-class MainSidebar extends Component {
-  render() {
-    const mainSidebarStyle = {
-      position: 'absolute',
-      top: 50,
-      bottom: 0,
-      left: 0,
-      width: 250,
-      padding: 20,
-      borderRight: '1px solid rgba(34, 36, 38, .15)'
-    }
+const mainSidebarStyle = {
+  float: 'left',
+  height: '100vh',
+  width: 250,
+  padding: 20,
+  borderRight: '1px solid rgba(34, 36, 38, .15)'
+};
 
-    return (
-      <div style={mainSidebarStyle}>
-        <Card
-          image='http://placekitten.com/209/209'
-          header='Elliot'
-          meta='User'
-          description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-        />
-      </div>
-    );
-  }
-}
+const MainSidebar = () => (
+  <div style={mainSidebarStyle}>
+    <UserInfo />
+  </div>
+);
+
 
 export default MainSidebar;
