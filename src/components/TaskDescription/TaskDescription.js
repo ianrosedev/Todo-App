@@ -18,6 +18,14 @@ const TaskDescription = (props) => (
       icon='delete'
       labelPosition='left'
     />
+    <Button
+      basic
+      floated='right'
+      color='green'
+      content='Completed'
+      icon='checkmark'
+      labelPosition='left'
+    />
 </Segment>
 );
 

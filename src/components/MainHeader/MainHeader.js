@@ -3,7 +3,10 @@ import './MainHeader.css';
 import { Menu, Icon, Button } from 'semantic-ui-react';
 
 const MainHeader = () => (
-  <Menu borderless id='main-header'>
+  <Menu
+    id='main-header'
+    borderless
+  >
     <Menu.Item header>
       <Icon name='list' />
       Todo List

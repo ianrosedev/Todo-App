@@ -8,7 +8,7 @@ class UserInfo extends Component {
         <Image src='http://placekitten.com/209/209' />
         <Card.Content>
           <Card.Header>Elliot</Card.Header>
-          <Card.Meta>Joined in 2016</Card.Meta>
+          <Card.Meta>Joined in 2017</Card.Meta>
           <Card.Description>Work hard, play harder.</Card.Description>
         </Card.Content>
         <Card.Content extra>
