@@ -26,7 +26,7 @@ const TaskDescription = (props) => (
       icon='checkmark'
       labelPosition='left'
     />
-</Segment>
+  </Segment>
 );
 
 export default TaskDescription;
