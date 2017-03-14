@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TaskOverview from '../TaskOverview/TaskOverview'
+import TaskOverview from '../../task-overview/TaskOverview/TaskOverview';
+import TaskInner from '../../task-inner/TaskInner/TaskInner';
 import './MainContent.css';
 
 class MainContent extends Component {
