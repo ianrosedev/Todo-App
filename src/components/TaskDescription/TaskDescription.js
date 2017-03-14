@@ -1,6 +1,6 @@
 import React from 'react';
 import './TaskDescription.css';
-import { Segment, Button, Icon } from 'semantic-ui-react';
+import { Segment, Button } from 'semantic-ui-react';
 
 const TaskDescription = (props) => (
   <Segment
@@ -8,10 +8,10 @@ const TaskDescription = (props) => (
     clearing
     color={props.color}
   >
-    <Icon name={props.icon || 'sticky note outline'} />
     <strong>{props.task}</strong>
     <Button
       basic
+      size='small'
       floated='right'
       color='red'
       content='Delete'
@@ -20,6 +20,7 @@ const TaskDescription = (props) => (
     />
     <Button
       basic
+      size='small'
       floated='right'
       color='green'
       content='Completed'

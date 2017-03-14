@@ -1,9 +1,5 @@
 #task-description {
-  line-height: 2.6em;
-}
-
-#task-description > strong {
-  margin-left: 7px;
+  line-height: 2.4em;
 }
 
 #task-description > button {
