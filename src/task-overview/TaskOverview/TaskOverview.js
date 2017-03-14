@@ -1,6 +1,6 @@
 import React from 'react';
-import ContentHeader from '../ContentHeader/ContentHeader';
-import TaskList from '../TaskList/TaskList';
+import ContentHeader from '../TaskOverviewHeader/TaskOverviewHeader';
+import TaskList from '../TaskOverviewList/TaskOverviewList';
 
 const TaskOverview = () => (
   <div>

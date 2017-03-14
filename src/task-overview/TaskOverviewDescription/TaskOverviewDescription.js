@@ -1,10 +1,10 @@
 import React from 'react';
-import './TaskDescription.css';
+import './TaskOverviewDescription.css';
 import { Segment, Button } from 'semantic-ui-react';
 
-const TaskDescription = (props) => (
+const TaskOverviewDescription = (props) => (
   <Segment
-    id='task-description'
+    id='task-overview-description'
     clearing
     color={props.color}
   >
@@ -30,4 +30,4 @@ const TaskDescription = (props) => (
   </Segment>
 );
 
-export default TaskDescription;
+export default TaskOverviewDescription;

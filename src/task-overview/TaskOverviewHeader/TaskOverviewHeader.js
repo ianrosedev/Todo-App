@@ -1,9 +1,9 @@
 import React from 'react';
-import './ContentHeader.css';
+import './TaskOverviewHeader.css';
 import { Menu, Button } from 'semantic-ui-react';
 
-const ContentHeader = () => (
-  <Menu borderless id='content-header'>
+const TaskOverviewHeader = () => (
+  <Menu borderless id='task-overview-header'>
     <Menu.Item header>
       <Button
         basic
@@ -16,4 +16,4 @@ const ContentHeader = () => (
   </Menu>
 );
 
-export default ContentHeader;
+export default TaskOverviewHeader;

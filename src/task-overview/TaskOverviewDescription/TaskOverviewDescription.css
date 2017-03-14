@@ -1,8 +1,8 @@
-#task-description {
+#task-overview-description {
   line-height: 2.4em;
 }
 
-#task-description > button {
+#task-overview-description > button {
   margin-left: 10px;
 }
 
