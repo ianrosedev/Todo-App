@@ -8,7 +8,7 @@ const TaskDescription = (props) => (
     clearing
     color={props.color}
   >
-    <Icon name='sticky note outline' />
+    <Icon name={props.timeLeft || 'sticky note outline'} />
     <strong>{props.task}</strong>
     <Button
       basic
