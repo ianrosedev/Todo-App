@@ -5,3 +5,8 @@ html, body {
 .ui.menu {
   border-radius: 0 !important;
 }
+
+hr {
+  border-top: 0;
+  border-color: rgba(34, 36, 38, .15);
+}

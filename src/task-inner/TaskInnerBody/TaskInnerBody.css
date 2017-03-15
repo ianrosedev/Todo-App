@@ -1,3 +1,7 @@
 #task-inner-body {
   margin: 20px;
 }
+
+#task-inner-body button {
+  bottom: 6px;
+}

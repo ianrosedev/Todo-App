@@ -1,3 +1,7 @@
+#task-inner-header {
+  border-left-width: 0;
+}
+
 #task-inner-header button {
   margin-left: 10px;
 }
