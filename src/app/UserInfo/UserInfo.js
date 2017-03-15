@@ -9,7 +9,7 @@ class UserInfo extends Component {
         <Card.Content>
           <Card.Header>Elliot</Card.Header>
           <Card.Meta>Joined in 2017</Card.Meta>
-          <Card.Description>Work hard, play harder.</Card.Description>
+          <Card.Description>Do or do not, there is no try.</Card.Description>
         </Card.Content>
         <Card.Content extra>
           <Button

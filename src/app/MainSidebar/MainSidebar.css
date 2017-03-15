@@ -1,7 +1,7 @@
 #main-sidebar {
   float: left;
-  width: 250px;
+  width: 230px;
   height: 100vh;
-  padding: 20px;
+  padding: 10px;
   border-right: 1px solid rgba(34, 36, 38, .15);
 }
