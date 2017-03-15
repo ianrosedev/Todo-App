@@ -6,6 +6,6 @@
   margin-left: 10px;
 }
 
-.ui.segment:not(.inverted) {
+#task-overview-description.ui.segment:not(.inverted) {
   border-top-width: 4px !important;
 }
