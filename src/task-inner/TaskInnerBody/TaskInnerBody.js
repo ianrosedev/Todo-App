@@ -10,7 +10,6 @@ const TaskInnerBody = () => (
         <strong>Notes</strong>
         <Button
           basic
-          size='tiny'
           floated='right'
           color='green'
           content='Add Note'
@@ -20,6 +19,7 @@ const TaskInnerBody = () => (
       </Segment>
         <Segment.Group>
           <Segment>
+            <strong>Note 1</strong>
             <Icon name='edit' />
             <Icon name='remove' />
             <hr />
@@ -28,6 +28,7 @@ const TaskInnerBody = () => (
             </p>
           </Segment>
           <Segment>
+            <strong>Note 2</strong>
             <Icon name='edit' />
             <Icon name='remove' />
             <hr />
@@ -36,6 +37,7 @@ const TaskInnerBody = () => (
             </p>
           </Segment>
           <Segment>
+            <strong>Note 3</strong>
             <Icon name='edit' />
             <Icon name='remove' />
             <hr />
@@ -51,7 +53,6 @@ const TaskInnerBody = () => (
         <strong>Websites</strong>
         <Button
           basic
-          size='tiny'
           floated='right'
           color='green'
           content='Add Website'

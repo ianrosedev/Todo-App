@@ -3,5 +3,9 @@
 }
 
 #task-inner-body button {
-  bottom: 6px;
+  bottom: 9px;
+}
+
+#task-inner-body strong {
+  margin-right: 7px;
 }
