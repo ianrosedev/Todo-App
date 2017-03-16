@@ -6,10 +6,18 @@
   margin-right: 7px;
 }
 
+
 #task-inner-body .edit {
   color: blue;
+  float: right;
+}
+
+#task-inner-body .checkmark {
+  color: green;
+  float: right;
 }
 
  #task-inner-body .remove {
   color: red;
+  float: right;
 }

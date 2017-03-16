@@ -22,8 +22,9 @@ const TaskInnerWebsites = () => (
           <a href='http://www.google.com' target='_blank'>
             Google
           </a>
-          <Icon name='edit' />
           <Icon name='remove' />
+          <Icon name='checkmark' />
+          <Icon name='edit' />
           <hr />
           <div>
             <p>Google is a good website to find info about anything.</p>
@@ -33,8 +34,9 @@ const TaskInnerWebsites = () => (
           <a href='http://www.github.com' target='_blank'>
             Github
           </a>
-          <Icon name='edit' />
           <Icon name='remove' />
+          <Icon name='checkmark' />
+          <Icon name='edit' />
           <hr />
           <div>
             <p>Github is a place to store code from your project.</p>
@@ -44,8 +46,9 @@ const TaskInnerWebsites = () => (
           <a href='https://jsfiddle.net/' target='_blank'>
             JSFiddle
           </a>
-          <Icon name='edit' />
           <Icon name='remove' />
+          <Icon name='checkmark' />
+          <Icon name='edit' />
           <hr />
           <div>
             <p>JSFiddle is fun to play with code that you working on.</p>

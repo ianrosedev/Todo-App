@@ -1,25 +1,25 @@
 import React from 'react';
-import './TaskInnerQuestions.css';
+import './TaskInnerIssues.css';
 import { Segment, Button, Icon } from 'semantic-ui-react';
 
-const TaskInnerQuestions = () => (
+const TaskInnerIssues = () => (
   <Segment.Group>
-    <Segment id='task-inner-questions'>
-      <Icon name='question circle outline' />
-      <strong>Questions</strong>
+    <Segment id='task-inner-issues'>
+      <Icon name='exclamation circle' />
+      <strong>Issues</strong>
       <Button
         basic
         size='small'
         floated='right'
         color='green'
-        content='Add Question'
+        content='Add Issue'
         icon='plus'
         labelPosition='left'
       />
     </Segment>
       <Segment.Group>
         <Segment>
-          <strong>Question 1</strong>
+          <strong>Issue 1</strong>
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
@@ -29,17 +29,17 @@ const TaskInnerQuestions = () => (
           </p>
         </Segment>
         <Segment>
-          <strong>Question 2</strong>
+          <strong>Issue 2</strong>
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
           <hr />
           <p>
-            Nulla facilisi. Cras hendrerit arcu ut nulla lacinia, ac dapibus eros posuere.
+            Nulla facilisi. Cras hendrerit arcu ut nulla lacinia, ac dapibus eros posuere. Suspendisse viverra dolor id felis auctor tincidunt. Aenean interdum, arcu non elementum egestas, est enim lobortis augue, vitae pellentesque neque nulla vel est.
           </p>
         </Segment>
     </Segment.Group>
   </Segment.Group>
 );
 
-export default TaskInnerQuestions;
+export default TaskInnerIssues;
