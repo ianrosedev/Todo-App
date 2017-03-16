@@ -1,5 +1,6 @@
 #main-content {
   display: flex;
   flex-direction: column;
-    border-left: 1px solid rgba(34, 36, 38, .15);
+  max-height: 100vh;
+  overflow-y: auto;
 }

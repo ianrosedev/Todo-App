@@ -2,10 +2,14 @@
   margin: 20px;
 }
 
-#task-inner-body button {
-  bottom: 9px;
+#task-inner-body .segment strong, #task-inner-body .segment a {
+  margin-right: 7px;
 }
 
-#task-inner-body strong {
-  margin-right: 7px;
+#task-inner-body .edit {
+  color: blue;
+}
+
+ #task-inner-body .remove {
+  color: red;
 }

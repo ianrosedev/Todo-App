@@ -1,0 +1,11 @@
+#task-description {
+  line-height: 2.4em;
+}
+
+#task-description button {
+  margin-left: 10px;
+}
+
+#task-description.ui.segment:not(.inverted) {
+  border-top-width: 4px !important;
+}

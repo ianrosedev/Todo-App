@@ -5,10 +5,17 @@ import { Menu, Button } from 'semantic-ui-react';
 const TaskInnerHeader = () => (
   <Menu borderless id='task-inner-header'>
     <Menu.Item header>
-      <strong>My Awesome Task</strong>
+      <strong>My Awesome Task Overview</strong>
     </Menu.Item>
     <Menu.Menu position='right'>
       <Menu.Item>
+        <Button
+          basic
+          color='green'
+          content='Add Subtask'
+          icon='plus'
+          labelPosition='left'
+        />
         <Button
           basic
           floated='right'
