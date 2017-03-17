@@ -10,27 +10,19 @@ const TaskInnerHeader = () => (
     <Menu.Menu position='right'>
       <Menu.Item>
         <Button
-          basic
-          color='green'
-          content='Add Subtask'
+          icon='level up'
+        />  
+        <Button
+          color='blue'
           icon='plus'
-          labelPosition='left'
         />
         <Button
-          basic
-          floated='right'
           color='green'
-          content='Completed'
           icon='checkmark'
-          labelPosition='left'
         />
         <Button
-          basic
-          floated='right'
           color='red'
-          content='Delete'
           icon='delete'
-          labelPosition='left'
         />
       </Menu.Item>
     </Menu.Menu>

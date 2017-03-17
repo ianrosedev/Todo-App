@@ -8,10 +8,9 @@ const TaskInnerNotes = () => (
       <Icon name='sticky note outline' />
       <strong>Notes</strong>
       <Button
-        basic
         size='small'
         floated='right'
-        color='green'
+        color='blue'
         content='Add Note'
         icon='plus'
         labelPosition='left'

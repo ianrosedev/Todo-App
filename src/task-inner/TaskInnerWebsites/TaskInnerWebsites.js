@@ -8,10 +8,9 @@ const TaskInnerWebsites = () => (
       <Icon name='computer' />
       <strong>Websites</strong>
       <Button
-        basic
         size='small'
         floated='right'
-        color='green'
+        color='blue'
         content='Add Website'
         icon='plus'
         labelPosition='left'

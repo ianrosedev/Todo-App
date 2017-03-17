@@ -8,10 +8,9 @@ const TaskInnerIssues = () => (
       <Icon name='exclamation circle' />
       <strong>Issues</strong>
       <Button
-        basic
         size='small'
         floated='right'
-        color='green'
+        color='blue'
         content='Add Issue'
         icon='plus'
         labelPosition='left'

@@ -5,7 +5,6 @@ import { Segment, Icon } from 'semantic-ui-react';
 const TaskDescription = (props) => (
   <Segment
     id='task-description'
-    clearing
     color={props.color}
   >
     <strong>{props.task}</strong>

@@ -7,7 +7,6 @@ const TaskList = () => (
     <TaskDescription color='black' task='Clean fish tank' />
     <TaskDescription color='red' task='Get butter beans' />
     <TaskDescription color='orange' task='Play with dog' />
-    <TaskDescription color='orange' task='Feed Fish' />
     <TaskDescription color='yellow' task='Finish 1st mockup of app' />
     <TaskDescription color='green' task='Finish 2nd mockup of app' />
     <TaskDescription color='blue' task='Push code to github' />

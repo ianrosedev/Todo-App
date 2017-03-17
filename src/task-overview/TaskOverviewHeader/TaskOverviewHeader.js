@@ -3,11 +3,13 @@ import './TaskOverviewHeader.css';
 import { Menu, Button } from 'semantic-ui-react';
 
 const TaskOverviewHeader = () => (
-  <Menu borderless id='task-overview-header'>
+  <Menu
+    id='task-overview-header'
+    borderless
+  >
     <Menu.Item header>
       <Button
-        basic
-        color='green'
+        color='blue'
         content='Add Task'
         icon='plus'
         labelPosition='left'

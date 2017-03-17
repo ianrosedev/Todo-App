@@ -8,10 +8,9 @@ const TaskInnerQuestions = () => (
       <Icon name='question circle outline' />
       <strong>Questions</strong>
       <Button
-        basic
         size='small'
         floated='right'
-        color='green'
+        color='blue'
         content='Add Question'
         icon='plus'
         labelPosition='left'
