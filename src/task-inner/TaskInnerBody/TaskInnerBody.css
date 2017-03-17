@@ -6,6 +6,10 @@
   cursor: pointer;
 }
 
+#task-inner-body button {
+  bottom: 7px;
+}
+
 #task-inner-body .expand {
   color: blue;
   float: left;
@@ -27,5 +31,5 @@
 }
 
 #task-inner-body .segment strong, #task-inner-body .segment a {
-  margin-right: 7px;
+  margin-left: 2px;
 }
