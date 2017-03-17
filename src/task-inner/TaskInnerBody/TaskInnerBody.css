@@ -2,6 +2,10 @@
   margin: 20px;
 }
 
+#task-inner-body .icon {
+  cursor: pointer;
+}
+
 #task-inner-body .expand {
   color: blue;
   float: left;
@@ -20,4 +24,8 @@
  #task-inner-body .remove {
   color: red;
   float: right;
+}
+
+#task-inner-body .segment strong, #task-inner-body .segment a {
+  margin-right: 7px;
 }
