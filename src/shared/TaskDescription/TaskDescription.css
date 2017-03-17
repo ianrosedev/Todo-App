@@ -2,10 +2,6 @@
   line-height: 2.5em;
 }
 
-#task-description .icon {
-  cursor: pointer;
-}
-
 #task-description .square {
   float: right;
 }
