@@ -11,14 +11,17 @@
 }
 
 #task-description .edit {
+  float: right;
   color: blue;
 }
 
 #task-description .checkmark {
+  float: right;
   color: green;
 }
 
 #task-description .remove {
+  float: right;
   color: red;
 }
 
