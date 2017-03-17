@@ -20,6 +20,7 @@ const TaskInnerNotes = () => (
       <Segment.Group>
         <Segment>
           <strong>Note 1</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
@@ -30,6 +31,7 @@ const TaskInnerNotes = () => (
         </Segment>
         <Segment>
           <strong>Note 2</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
@@ -40,6 +42,7 @@ const TaskInnerNotes = () => (
         </Segment>
         <Segment>
           <strong>Note 3</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />

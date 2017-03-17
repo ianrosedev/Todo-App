@@ -22,6 +22,7 @@ const TaskInnerWebsites = () => (
           <a href='http://www.google.com' target='_blank'>
             Google
           </a>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
@@ -34,6 +35,7 @@ const TaskInnerWebsites = () => (
           <a href='http://www.github.com' target='_blank'>
             Github
           </a>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
@@ -46,6 +48,7 @@ const TaskInnerWebsites = () => (
           <a href='https://jsfiddle.net/' target='_blank'>
             JSFiddle
           </a>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />

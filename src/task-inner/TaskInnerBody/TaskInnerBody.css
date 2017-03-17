@@ -2,10 +2,10 @@
   margin: 20px;
 }
 
-#task-inner-body .segment strong, #task-inner-body .segment a {
-  margin-right: 7px;
+#task-inner-body .expand {
+  color: blue;
+  float: left;
 }
-
 
 #task-inner-body .edit {
   color: blue;

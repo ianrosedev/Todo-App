@@ -1,11 +1,28 @@
 #task-description {
-  line-height: 2.4em;
+  line-height: 2.5em;
 }
 
-#task-description button {
-  margin-left: 10px;
+#task-description .icon {
+  cursor: pointer;
 }
 
+#task-description .square {
+  float: right;
+}
+
+#task-description .edit {
+  color: blue;
+}
+
+#task-description .checkmark {
+  color: green;
+}
+
+#task-description .remove {
+  color: red;
+}
+
+/* Color on top of items */
 #task-description.ui.segment:not(.inverted) {
-  border-top-width: 4px !important;
+  border-top-width: 5px !important;
 }

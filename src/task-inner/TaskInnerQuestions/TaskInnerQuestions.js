@@ -20,6 +20,7 @@ const TaskInnerQuestions = () => (
       <Segment.Group>
         <Segment>
           <strong>Question 1</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
@@ -30,6 +31,7 @@ const TaskInnerQuestions = () => (
         </Segment>
         <Segment>
           <strong>Question 2</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />

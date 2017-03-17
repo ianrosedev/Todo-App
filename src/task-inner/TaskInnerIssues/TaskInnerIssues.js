@@ -20,9 +20,11 @@ const TaskInnerIssues = () => (
       <Segment.Group>
         <Segment>
           <strong>Issue 1</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
+
           <hr />
           <p>
              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate, sem sed finibus varius, nisi magna sollicitudin est, quis eleifend nisl velit sit amet turpis. Curabitur id tortor et sapien bibendum laoreet et sit amet odio.
@@ -30,6 +32,7 @@ const TaskInnerIssues = () => (
         </Segment>
         <Segment>
           <strong>Issue 2</strong>
+          <Icon name='expand' />
           <Icon name='remove' />
           <Icon name='checkmark' />
           <Icon name='edit' />
