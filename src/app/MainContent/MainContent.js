@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import TaskOverview from '../../task-overview/TaskOverview/TaskOverview';
 import TaskInner from '../../task-inner/TaskInner/TaskInner';
