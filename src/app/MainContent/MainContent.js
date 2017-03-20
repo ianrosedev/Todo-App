@@ -9,7 +9,7 @@ class MainContent extends Component {
   render() {
     return (
       <div id='main-content'>
-        <TaskInner />
+        <TaskOverview />
       </div>
     );
   }
