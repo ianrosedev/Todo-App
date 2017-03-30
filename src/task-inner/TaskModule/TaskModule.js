@@ -4,7 +4,7 @@ import Task from '../Task/Task';
 import { Segment } from 'semantic-ui-react';
 
 const TaskModule = (props) => {
-  const tasks = props.data
+const tasks = props.data
     .filter((x, i) => i !== 0)
     .map((task, i) => (
       <Task

@@ -3,10 +3,10 @@ import TaskInnerHeader from '../TaskInnerHeader/TaskInnerHeader';
 import TaskInnerBody from '../TaskInnerBody/TaskInnerBody';
 import './TaskInner.css';
 
-const TaskInner = () => (
+const TaskInner = (props) => (
   <div id='task-inner'>
-    <TaskInnerHeader />
-    <TaskInnerBody />
+    <TaskInnerHeader goBackHome={props.goBackHome} />
+    <TaskInnerBody {...props} />
   </div>
 );
 

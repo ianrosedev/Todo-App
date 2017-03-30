@@ -6,6 +6,7 @@ const TaskDescription = (props) => (
   <Segment
     id='task-description'
     color={props.color}
+    onClick={() => props.getTaskId(props.TASK_ID)}
   >
     <strong>{props.task}</strong>
     <Icon name='remove' />

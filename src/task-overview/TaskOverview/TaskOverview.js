@@ -1,12 +1,12 @@
 import React from 'react';
-import ContentHeader from '../TaskOverviewHeader/TaskOverviewHeader';
+import TaskOverviewHeader from '../TaskOverviewHeader/TaskOverviewHeader';
 import TaskOverviewBody from '../TaskOverviewBody/TaskOverviewBody';
 import './TaskOverview.css';
 
-const TaskOverview = () => (
+const TaskOverview = (props) => (
   <div id='task-overview'>
-    <ContentHeader />
-    <TaskOverviewBody />
+    <TaskOverviewHeader />
+    <TaskOverviewBody {...props} />
   </div>
 );
 

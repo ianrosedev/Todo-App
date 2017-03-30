@@ -2,17 +2,19 @@ import React from 'react';
 import TaskDescription from '../TaskDescription/TaskDescription'
 
 const TaskList = (props) => {
-  const data = props.data.map((data, i) => (
+  const tasks = props.data.map((data) => (
     <TaskDescription
-      key={i}
+      key={data.TASK_ID}
+      TASK_ID={data.TASK_ID}
       color={data.color}
       task={data.task}
+      getTaskId={props.getTaskId}
     />
   ));
 
   return (
     <div id='task-list'>
-      {data}
+      {tasks}
     </div>
   );
 };
