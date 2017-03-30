@@ -2,6 +2,10 @@
   line-height: 2.5em;
 }
 
+#task-description:hover {
+  cursor: pointer;
+}
+
 #task-description .square {
   float: right;
 }

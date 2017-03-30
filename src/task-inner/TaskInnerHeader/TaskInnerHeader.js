@@ -3,7 +3,7 @@ import './TaskInnerHeader.css'
 import { Menu, Button } from 'semantic-ui-react';
 
 class TaskInnerHeader extends Component {
-  handleGoBackHomeClick = () => (
+  handleGoBackHome = () => (
     this.props.goBackHome()
   );
 
@@ -11,17 +11,13 @@ class TaskInnerHeader extends Component {
     return (
       <Menu borderless id='task-inner-header'>
         <Menu.Item header>
-          <strong>My Awesome Task Overview</strong>
+          <strong>{this.props.data.task}</strong>
         </Menu.Item>
         <Menu.Menu position='right'>
           <Menu.Item>
             <Button
               icon='level up'
-              onClick={this.handleGoBackHomeClick}
-            />
-            <Button
-              color='blue'
-              icon='plus'
+              onClick={this.handleGoBackHome}
             />
             <Button
               color='green'

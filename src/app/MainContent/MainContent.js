@@ -4,6 +4,7 @@ import TaskInner from '../../task-inner/TaskInner/TaskInner';
 import './MainContent.css';
 
 import FAKE_DATA from '../../FAKE_DATA';
+const DATA = FAKE_DATA.TASK_LIST;
 
 class MainContent extends Component {
   state = {
@@ -29,13 +30,15 @@ class MainContent extends Component {
       <div id='main-content'>
         {this.state.isOverviewVisible ?
           <TaskOverview
-            data={FAKE_DATA.TASK_LIST}
+            data={DATA}
             getTaskId={this.getTaskId}
           />
           :
           <TaskInner
             data={
-              FAKE_DATA.TASK_LIST.filter(t => t.TASK_ID === this.state.clickedTaskId)[0]
+              DATA.filter(t =>
+                t.TASK_ID === this.state.clickedTaskId
+              )[0]
             }
             _id={this.state.clickedTaskId}
             goBackHome={this.changeOverviewVisibility}

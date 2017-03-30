@@ -1,7 +1,9 @@
+import uuidv4 from 'uuid/v4';
+
 const FAKE_DATA = {
   TASK_LIST: [
     {
-      TASK_ID: 1001,
+      TASK_ID: uuidv4(),
       color: 'black',
       task: 'Task 1',
       ISSUES: [
@@ -70,7 +72,7 @@ const FAKE_DATA = {
         ]
     },
     {
-      TASK_ID: 1002,
+      TASK_ID: uuidv4(),
       color: 'red',
       task: 'Task 2',
       ISSUES: [
@@ -139,7 +141,7 @@ const FAKE_DATA = {
           ]
     },
     {
-      TASK_ID: 1003,
+      TASK_ID: uuidv4(),
       color: 'green',
       task: 'Task 3',
       ISSUES: [
@@ -208,7 +210,7 @@ const FAKE_DATA = {
           ]
     },
     {
-      TASK_ID: 1004,
+      TASK_ID: uuidv4(),
       color: 'blue',
       task: 'Task 4',
       ISSUES: [

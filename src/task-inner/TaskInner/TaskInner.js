@@ -5,7 +5,7 @@ import './TaskInner.css';
 
 const TaskInner = (props) => (
   <div id='task-inner'>
-    <TaskInnerHeader goBackHome={props.goBackHome} />
+    <TaskInnerHeader {...props} />
     <TaskInnerBody {...props} />
   </div>
 );
