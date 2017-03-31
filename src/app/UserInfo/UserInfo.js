@@ -3,13 +3,15 @@ import { Card, Image, Button } from 'semantic-ui-react';
 
 class UserInfo extends Component {
   render() {
+    const DATA = this.props.DATA;
+
     return (
       <Card>
-        <Image src='http://placekitten.com/209/209' />
+        <Image src={DATA.IMAGE} />
         <Card.Content>
-          <Card.Header>Elliot</Card.Header>
-          <Card.Meta>Joined in 2017</Card.Meta>
-          <Card.Description>Do or do not, there is no try.</Card.Description>
+          <Card.Header>{DATA.USER_NAME}</Card.Header>
+          <Card.Meta>Joined in {DATA.JOINED}</Card.Meta>
+          <Card.Description>{DATA.SAYING}</Card.Description>
         </Card.Content>
         <Card.Content extra>
           <Button

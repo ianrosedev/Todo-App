@@ -2,9 +2,9 @@ import React from 'react';
 import UserInfo from '../UserInfo/UserInfo';
 import './MainSidebar.css';
 
-const MainSidebar = () => (
+const MainSidebar = (props) => (
   <div id='main-sidebar'>
-    <UserInfo />
+    <UserInfo {...props} />
   </div>
 );
 

@@ -1,6 +1,13 @@
 import uuidV4 from 'uuid/v4';
 
 const FAKE_DATA = {
+  USER_ID: uuidV4(),
+  USER_INFO: {
+    USER_NAME: 'Elliot',
+    IMAGE: 'http://placekitten.com/209/209',
+    JOINED: 2017,
+    SAYING: 'Do or do not, there is no try.'
+  },
   TASK_LIST: [
     {
       TASK_ID: uuidV4(),
@@ -162,10 +169,6 @@ const FAKE_DATA = {
             {
               name: 'Questions',
               icon: 'question circle outline'
-            },
-            {
-              title: 'Question TESTING 3',
-              body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate, sem sed finibus varius, nisi magna sollicitudin est, quis eleifend nisl velit sit amet turpis. Curabitur id tortor et sapien bibendum laoreet et sit amet odio.'
             },
             {
               title: 'Question 2',

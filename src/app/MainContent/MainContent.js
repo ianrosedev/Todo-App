@@ -3,9 +3,6 @@ import TaskOverview from '../../task-overview/TaskOverview/TaskOverview';
 import TaskInner from '../../task-inner/TaskInner/TaskInner';
 import './MainContent.css';
 
-import FAKE_DATA from '../../FAKE_DATA';
-const DATA = FAKE_DATA.TASK_LIST;
-
 class MainContent extends Component {
   state = {
     isOverviewVisible: true,
@@ -30,13 +27,13 @@ class MainContent extends Component {
       <div id='main-content'>
         {this.state.isOverviewVisible ?
           <TaskOverview
-            data={DATA}
+            data={this.props.DATA}
             getTaskId={this.getTaskId}
           />
           :
           <TaskInner
             data={
-              DATA.filter(t =>
+              this.props.DATA.filter(t =>
                 t.TASK_ID === this.state.clickedTaskId
               )[0]
             }
