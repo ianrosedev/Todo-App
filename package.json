@@ -1,23 +1,24 @@
 {
   "name": "TodoApp",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "react-scripts": "0.9.4"
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianrosedev/Todo-App.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianrosedev/Todo-App/issues"
+  },
+  "homepage": "https://github.com/ianrosedev/Todo-App#readme",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-router-dom": "^4.0.0-beta.8",
-    "semantic-ui-css": "^2.2.9",
-    "semantic-ui-react": "^0.67.0",
-    "uuid": "^3.0.1"
+    "concurrently": "^3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "install": "(cd client && npm install) && (cd server && npm install)",
+    "start": "concurrently \"cd client && PORT=3000 npm start\" \"cd server && PORT=3001 npm start\""
   }
 }
