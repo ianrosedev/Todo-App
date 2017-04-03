@@ -1,6 +1,7 @@
 import React from 'react';
+import AddTaskForm from '../../shared/AddTaskForm/AddTaskForm';
 import './TaskOverviewHeader.css';
-import { Menu, Button } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 
 const TaskOverviewHeader = () => (
   <Menu
@@ -8,11 +9,8 @@ const TaskOverviewHeader = () => (
     borderless
   >
     <Menu.Item header>
-      <Button
-        color='blue'
+      <AddTaskForm
         content='Add Task'
-        icon='plus'
-        labelPosition='left'
       />
     </Menu.Item>
   </Menu>
