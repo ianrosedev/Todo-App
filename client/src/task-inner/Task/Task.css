@@ -1,0 +1,26 @@
+#task .expand:hover,
+#task .edit:hover,
+#task .checkmark:hover,
+#task .remove:hover {
+  cursor: pointer;
+}
+
+#task .expand {
+  color: blue;
+  float: left;
+}
+
+#task .edit {
+  color: blue;
+  float: right;
+}
+
+#task .checkmark {
+  color: green;
+  float: right;
+}
+
+ #task .remove {
+  color: red;
+  float: right;
+}

@@ -5,23 +5,3 @@
 #task-inner-body button {
   bottom: 7px;
 }
-
-#task-inner-body .expand {
-  color: blue;
-  float: left;
-}
-
-#task-inner-body .edit {
-  color: blue;
-  float: right;
-}
-
-#task-inner-body .checkmark {
-  color: green;
-  float: right;
-}
-
- #task-inner-body .remove {
-  color: red;
-  float: right;
-}
