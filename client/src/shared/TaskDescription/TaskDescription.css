@@ -2,7 +2,11 @@
   line-height: 2.5em;
 }
 
-#task-description:hover {
+#task-description strong:hover,
+#task-description .square:hover,
+#task-description .edit:hover,
+#task-description .checkmark:hover,
+#task-description .remove:hover {
   cursor: pointer;
 }
 

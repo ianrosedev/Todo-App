@@ -8,7 +8,7 @@ const TaskList = (props) => {
       key={task.TASK_ID}
       color={task.COLOR}
       task={task.TASK_NAME}
-      getTaskId={props.getTaskId}
+      {...props}
     />
   ));
 

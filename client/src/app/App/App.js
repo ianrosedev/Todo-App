@@ -9,7 +9,17 @@ import './App.css';
 class App extends Component {
   state = { DATA: null };
 
-  async componentDidMount() {
+  deleteTask = async (id) => {
+    const response = await fetch(
+      `/data/${id}`,
+      { method: 'DELETE' }
+    );
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
+  componentDidMount = async () => {
     const response = await fetch('/data');
     const data = await response.json();
 
@@ -22,7 +32,10 @@ class App extends Component {
         <div>
           <MainHeader />
           <MainSidebar DATA={this.state.DATA.USER_INFO} />
-          <MainContent DATA={this.state.DATA.TASK_LIST} />
+          <MainContent
+            DATA={this.state.DATA.TASK_LIST}
+            deleteTask={this.deleteTask}
+          />
         </div>
       );
     }

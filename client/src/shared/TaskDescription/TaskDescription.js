@@ -7,15 +7,23 @@ class TaskDescription extends Component {
     this.props.getTaskId(this.props._id)
   );
 
+  handleDeleteTask = () => (
+    this.props.deleteTask(this.props._id)
+  );
+
   render() {
     return (
       <Segment
         id='task-description'
         color={this.props.color}
-        onClick={this.handleGetTaskId}
       >
-        <strong>{this.props.task}</strong>
-        <Icon name='remove' />
+        <strong onClick={this.handleGetTaskId}>
+          {this.props.task}
+        </strong>
+        <Icon
+          name='remove'
+          onClick={this.handleDeleteTask}
+        />
         <Icon name='checkmark' />
         <Icon name='edit' />
         <Icon
