@@ -1,5 +1,8 @@
-#add-task-form.ui.modal > .close {
+#add-task-form .close {
   color: red;
+}
+
+#add-task-form.ui.modal > .close {
   top: 1.0535rem;
   right: 1rem;
 }
