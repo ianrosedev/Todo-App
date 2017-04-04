@@ -10,7 +10,7 @@ const TaskOverviewHeader = () => (
   >
     <Menu.Item header>
       <AddTaskForm
-        content='Add Task'
+        content='Task'
       />
     </Menu.Item>
   </Menu>

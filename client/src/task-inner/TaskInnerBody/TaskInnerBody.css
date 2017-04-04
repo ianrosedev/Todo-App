@@ -3,5 +3,6 @@
 }
 
 #task-inner-body button {
-  bottom: 7px;
+  float: right;
+  bottom: 8.5px;
 }
