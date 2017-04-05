@@ -9,7 +9,7 @@ const AddTaskForm = (props) => (
     closeOnDimmerClick={false}
     trigger={
       <Button
-        color='blue'
+        color='green'
         content={`Add ${props.content}`}
         icon='plus'
         labelPosition='left'

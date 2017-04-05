@@ -2,11 +2,16 @@ import React from 'react';
 import TaskDescription from '../TaskDescription/TaskDescription'
 
 const TaskList = (props) => {
-  const tasks = props.data.map((task) => (
+
+  const tasksSortedByImportance = props.data.sort((a, b) => (
+    a.IMPORTANCE.LEVEL - b.IMPORTANCE.LEVEL
+  ));
+
+  const tasks = tasksSortedByImportance.map((task) => (
     <TaskDescription
       _id={task.TASK_ID}
       key={task.TASK_ID}
-      color={task.COLOR}
+      color={task.IMPORTANCE.COLOR}
       task={task.TASK_NAME}
       {...props}
     />
