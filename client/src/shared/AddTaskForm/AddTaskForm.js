@@ -23,7 +23,7 @@ const AddTaskForm = (props) => (
     <Modal.Description>
       <Form>
         <Form.Field>
-          <label>{props.content} Title</label>
+          <label>{props.content} Name</label>
           <input placeholder={`Your ${props.content}s name`} />
         </Form.Field>
         <Form.Field>

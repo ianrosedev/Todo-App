@@ -1,5 +1,6 @@
 import React from 'react';
-import TaskDescription from '../TaskDescription/TaskDescription'
+import TaskDescription from '../TaskDescription/TaskDescription';
+import { Icon } from 'semantic-ui-react';
 
 const TaskList = (props) => {
 
@@ -17,9 +18,22 @@ const TaskList = (props) => {
     />
   ));
 
+  const displayTasks = (tasks.length > 0) ?
+    tasks :
+    (
+      <div>
+        <Icon
+          style={{marginLeft: 30}}
+          name='arrow up'
+          size='huge'
+        />
+        <h1>Add a Task!</h1>
+      </div>
+    );
+
   return (
     <div id='task-list'>
-      {tasks}
+      {displayTasks}
     </div>
   );
 };
