@@ -29,7 +29,7 @@ class MainContent extends Component {
           <TaskOverview
             data={this.props.DATA}
             getTaskId={this.getTaskId}
-            deleteTask={this.props.deleteTask}
+            {...this.props}
           />
           :
           <TaskInner

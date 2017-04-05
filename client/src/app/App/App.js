@@ -19,6 +19,16 @@ class App extends Component {
     this.setState({DATA: data});
   }
 
+  changeTaskImportance = async (id, color, level) => {
+    const response = await fetch(
+      `/data/importance/${id}/${color}/${level}`,
+      { method: 'PUT' }
+    );
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
   componentDidMount = async () => {
     const response = await fetch('/data');
     const data = await response.json();
@@ -35,6 +45,7 @@ class App extends Component {
           <MainContent
             DATA={this.state.DATA.TASK_LIST}
             deleteTask={this.deleteTask}
+            changeTaskImportance={this.changeTaskImportance}
           />
         </div>
       );
