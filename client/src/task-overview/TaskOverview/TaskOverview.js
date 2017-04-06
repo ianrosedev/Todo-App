@@ -5,7 +5,7 @@ import './TaskOverview.css';
 
 const TaskOverview = (props) => (
   <div id='task-overview'>
-    <TaskOverviewHeader />
+    <TaskOverviewHeader newTask={props.newTask} />
     <TaskOverviewBody {...props} />
   </div>
 );

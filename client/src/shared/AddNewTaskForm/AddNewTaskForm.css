@@ -1,0 +1,13 @@
+#add-new-task-form label {
+  float: left;
+  margin-right: 10px;
+}
+
+#add-new-task-form .close {
+  color: red;
+}
+
+#add-new-task-form.ui.modal > .close {
+  top: 1.0535rem;
+  right: 1rem;
+}

@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import './AddTaskForm.css';
-import { Modal, Button, Form, TextArea } from 'semantic-ui-react';
+import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
+import './AddNewTaskForm.css';
+import { Modal, Button, Form, Icon } from 'semantic-ui-react';
 
-class AddTaskForm extends Component {
+class AddNewTaskForm extends Component {
   state = {
     taskTitle: '',
-    taskBody: ''
+    taskImportance: {
+      color: '',
+      importance: null
+    }
   };
 
   handleInputChange = (e) => {
@@ -25,10 +29,19 @@ class AddTaskForm extends Component {
     this.props.newTask(task)
   );
 
+  handleChangeTaskImportance = (color, importance) => {
+    this.setState({
+      taskImportance: {
+        color,
+        importance
+      }
+    });
+  }
+
   render() {
     return (
       <Modal
-        id='add-task-form'
+        id='add-new-task-form'
         open={this.state.isOpen}
         closeIcon='close'
         closeOnDimmerClick={false}
@@ -48,7 +61,7 @@ class AddTaskForm extends Component {
           <Modal.Description>
             <Form onSubmit={this.handleSubmit}>
               <Form.Field>
-                <label><h4>{this.props.content} Name</h4></label>
+                <label><h4>{this.props.content} Name:</h4></label>
                 <input
                   type='text'
                   name='taskTitle'
@@ -58,12 +71,18 @@ class AddTaskForm extends Component {
                 />
               </Form.Field>
               <Form.Field>
-                <label><h4>{this.props.content}</h4></label>
-                <TextArea
-                  name='taskBody'
-                  value={this.state.taskBody}
-                  onChange={this.handleInputChange}
-                  placeholder='Tell us more...'
+                <label><h4>Task Importance:</h4></label>
+                <ImportanceDropdown
+                  icon={
+                    <Icon
+                      name='square'
+                      size='large'
+                      color={this.state.taskImportance.color || 'grey'}
+                    />
+                  }
+                  handleChangeTaskImportance={
+                    this.handleChangeTaskImportance
+                  }
                 />
               </Form.Field>
               <Button
@@ -80,4 +99,4 @@ class AddTaskForm extends Component {
   }
 }
 
-export default AddTaskForm;
+export default AddNewTaskForm;

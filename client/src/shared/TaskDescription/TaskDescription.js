@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
 import './TaskDescription.css';
-import { Segment, Icon, Dropdown } from 'semantic-ui-react';
+import { Segment, Icon } from 'semantic-ui-react';
 
 class TaskDescription extends Component {
   handleGetTaskId = () => (
@@ -16,37 +17,22 @@ class TaskDescription extends Component {
   );
 
   render() {
-    const importanceColors = ['black', 'red', 'orange', 'green', 'blue'];
-
-    const importanceColorsDropdown = importanceColors.map((color, i) => (
-      <Dropdown.Item
-        className='dropdown'
-        id={color}
-        key={i}
-        text={color[0].toUpperCase() + color.slice(1)}
-        onClick={
-          () => this.handleChangeTaskImportance(color, i)
-        }
-      />
-    ));
-
     return (
       <Segment
         id='task-description'
         color={this.props.color}
       >
-        <Dropdown
+        <ImportanceDropdown
           icon={
             <Icon
               name='square'
               color={this.props.color}
             />
           }
-        >
-          <Dropdown.Menu>
-            {importanceColorsDropdown}
-          </Dropdown.Menu>
-        </Dropdown>
+          handleChangeTaskImportance={
+            this.handleChangeTaskImportance
+          }
+        />
         <strong onClick={this.handleGetTaskId}>
           {this.props.task}
         </strong>

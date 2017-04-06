@@ -602,6 +602,10 @@ app.get('/data', (req, res) => {
   res.json(FAKE_DATA);
 });
 
+app.post('data/form', (req, res) => {
+  res.send('form submitted');
+});
+
 app.put('/data/importance/:id/:color/:level', (req, res) => {
   const matchedItem = FAKE_DATA.TASK_LIST.findIndex((item) => (
     item.TASK_ID === Number(req.params.id)
@@ -623,10 +627,6 @@ app.delete('/data/:id', (req, res) => {
   );
 
   res.json(FAKE_DATA);
-});
-
-app.post('/form', (req, res) => {
-  res.send('form submitted');
 });
 
 app.set('port', (process.env.PORT || 3001));
