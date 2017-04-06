@@ -29,11 +29,11 @@ class AddNewTaskForm extends Component {
     this.props.newTask(task)
   );
 
-  handleChangeTaskImportance = (color, importance) => {
+  handleChangeTaskImportance = (color, level) => {
     this.setState({
       taskImportance: {
         color,
-        importance
+        level
       }
     });
   }

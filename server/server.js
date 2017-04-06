@@ -602,8 +602,8 @@ app.get('/data', (req, res) => {
   res.json(FAKE_DATA);
 });
 
-app.post('/data/form/', (req, res) => {
-  FAKE_DATA.TASK_LIST.push(
+app.post('/data/form', (req, res) => {
+  FAKE_DATA.TASK_LIST = FAKE_DATA.TASK_LIST.concat([
     {
       TASK_ID: ID_NUMBER++,
       TASK_NAME: req.body.taskTitle,
@@ -640,7 +640,7 @@ app.post('/data/form/', (req, res) => {
         }
       ]
     }
-  );
+  ]);
 
   res.json(FAKE_DATA);
 });
