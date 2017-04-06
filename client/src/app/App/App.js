@@ -10,7 +10,19 @@ class App extends Component {
   state = { DATA: null };
 
   newTask = async (task) => {
-    console.log(task);
+    const response = await fetch(
+      '/data/form',
+      {
+        method: 'POST',
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(task),
+      }
+    );
+    const data = await response.json();
+
+    this.setState({DATA: data});
   };
 
   deleteTask = async (id) => {

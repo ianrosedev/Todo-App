@@ -42,7 +42,6 @@ class AddNewTaskForm extends Component {
     return (
       <Modal
         id='add-new-task-form'
-        open={this.state.isOpen}
         closeIcon='close'
         closeOnDimmerClick={false}
         trigger={

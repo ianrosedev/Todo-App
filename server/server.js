@@ -596,14 +596,53 @@ const FAKE_DATA = {
 };
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/data', (req, res) => {
   res.json(FAKE_DATA);
 });
 
-app.post('data/form', (req, res) => {
-  res.send('form submitted');
+app.post('/data/form/', (req, res) => {
+  FAKE_DATA.TASK_LIST.push(
+    {
+      TASK_ID: ID_NUMBER++,
+      TASK_NAME: req.body.taskTitle,
+      IMPORTANCE: {
+        COLOR: req.body.taskImportance.color,
+        LEVEL: req.body.taskImportance.level
+      },
+      ISSUES: [
+        {
+          TASK_ID: ID_NUMBER++,
+          name: 'Issues',
+          icon: 'exclamation circle'
+        }
+      ],
+      QUESTIONS: [
+        {
+          TASK_ID: ID_NUMBER++,
+          name: 'Questions',
+          icon: 'question circle outline'
+        }
+      ],
+      NOTES: [
+        {
+          TASK_ID: ID_NUMBER++,
+          name: 'Notes',
+          icon: 'sticky note outline'
+        }
+      ],
+      WEBSITES: [
+        {
+          TASK_ID: ID_NUMBER++,
+          name: 'Websites',
+          icon: 'computer'
+        }
+      ]
+    }
+  );
+
+  res.json(FAKE_DATA);
 });
 
 app.put('/data/importance/:id/:color/:level', (req, res) => {
