@@ -11,7 +11,7 @@ class App extends Component {
 
   addNewTask = async (task) => {
     const response = await fetch(
-      '/data/form',
+      '/data/form/new',
       {
         method: 'POST',
         headers: new Headers({
@@ -25,8 +25,20 @@ class App extends Component {
     this.setState({DATA: data});
   };
 
-  addTask = async (task) => {
-    console.log(task);
+  addSubTask = async (task) => {
+    const response = await fetch(
+      '/data/form/sub',
+      {
+        method: 'POST',
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(task),
+      }
+    );
+    const data = await response.json();
+
+    this.setState({DATA: data});
   };
 
   deleteTask = async (id) => {
@@ -67,7 +79,7 @@ class App extends Component {
             deleteTask={this.deleteTask}
             changeTaskImportance={this.changeTaskImportance}
             addNewTask={this.addNewTask}
-            addTask={this.addTask}
+            addSubTask={this.addSubTask}
           />
         </div>
       );

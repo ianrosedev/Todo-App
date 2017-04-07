@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './AddTaskForm.css';
+import './AddSubTaskForm.css';
 import { Modal, Button, Icon, Form, TextArea } from 'semantic-ui-react';
 
-class AddTaskForm extends Component {
+class addSubTaskForm extends Component {
   state = {
     isOpen: false,
     id: this.props.id,
@@ -16,16 +16,16 @@ class AddTaskForm extends Component {
     });
   }
 
-  handleAddTask = (task) => (
-    this.props.addTask(task)
+  handleAddSubTask = (task) => (
+    this.props.addSubTask(task)
   );
 
   handleSubmit = (e) => {
     e.preventDefault();
 
-    this.handleAddTask({
+    this.handleAddSubTask({
       id: this.props._id,
-      name: this.props.content.toUpperCase(),
+      name: this.props.content.toUpperCase() + 'S',
       taskTitle: this.state.taskTitle,
       taskBody: this.state.taskBody
     });
@@ -40,7 +40,7 @@ class AddTaskForm extends Component {
   render() {
     return (
       <Modal
-        id='add-task-form'
+        id='add-sub-task-form'
         open={this.state.isOpen}
         closeIcon={
           <Icon
@@ -100,4 +100,4 @@ class AddTaskForm extends Component {
   }
 }
 
-export default AddTaskForm;
+export default addSubTaskForm;

@@ -602,7 +602,7 @@ app.get('/data', (req, res) => {
   res.json(FAKE_DATA);
 });
 
-app.post('/data/form', (req, res) => {
+app.post('/data/form/new', (req, res) => {
   FAKE_DATA.TASK_LIST = [
     ...FAKE_DATA.TASK_LIST,
     {
@@ -645,6 +645,20 @@ app.post('/data/form', (req, res) => {
 
   res.json(FAKE_DATA);
 });
+
+app.post('/data/form/sub', (req, res) => {
+  const matchedItem = FAKE_DATA.TASK_LIST.findIndex((item) => (
+    item.TASK_ID === req.body.id
+  ));
+
+  FAKE_DATA.TASK_LIST[matchedItem][req.body.name].push({
+    TASK_ID: ID_NUMBER++,
+    title: req.body.taskTitle,
+    body: req.body.taskBody
+  });
+
+  res.send(FAKE_DATA);
+})
 
 app.put('/data/importance/:id/:color/:level', (req, res) => {
   const matchedItem = FAKE_DATA.TASK_LIST.findIndex((item) => (

@@ -8,22 +8,22 @@ const TaskInnerBody = (props) => {
       <TaskModule
         data={props.data.ISSUES}
         _id={props._id}
-        addTask={props.addTask}
+        addSubTask={props.addSubTask}
       />
       <TaskModule
         data={props.data.QUESTIONS}
         _id={props._id}
-        addTask={props.addTask}
+        addSubTask={props.addSubTask}
        />
       <TaskModule
         data={props.data.NOTES}
         _id={props._id}
-        addTask={props.addTask}
+        addSubTask={props.addSubTask}
       />
       <TaskModule
         data={props.data.WEBSITES}
         _id={props._id}
-        addTask={props.addTask}
+        addSubTask={props.addSubTask}
       />
     </div>
   );
