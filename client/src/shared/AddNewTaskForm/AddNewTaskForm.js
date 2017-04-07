@@ -5,29 +5,13 @@ import { Modal, Button, Form, Icon } from 'semantic-ui-react';
 
 class AddNewTaskForm extends Component {
   state = {
+    isOpen: false,
     taskTitle: '',
     taskImportance: {
       color: '',
-      importance: null
+      level: null
     }
   };
-
-  handleInputChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-
-    // Close modal here!
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.handleNewTask(this.state);
-  }
-
-  handleNewTask = (task) => (
-    this.props.newTask(task)
-  );
 
   handleChangeTaskImportance = (color, level) => {
     this.setState({
@@ -38,35 +22,73 @@ class AddNewTaskForm extends Component {
     });
   }
 
+  handleInputChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  handleAddNewTask = (task) => (
+    this.props.addNewTask(task)
+  );
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.handleAddNewTask({
+      taskTitle: this.state.taskTitle,
+      taskImportance: {
+        color: this.state.taskImportance.color,
+        level: this.state.taskImportance.level
+      }
+    });
+
+    this.setState({
+      isOpen: false,
+      taskTitle: '',
+      taskImportance: {
+        color: '',
+        importance: null
+      }
+    });
+  }
+
   render() {
     return (
       <Modal
         id='add-new-task-form'
-        closeIcon='close'
-        closeOnDimmerClick={false}
+        open={this.state.isOpen}
+        closeIcon={
+          <Icon
+            name='close'
+            onClick={() => this.setState({isOpen: false})}
+          />
+        }
         trigger={
           <Button
             color='green'
-            content={`Add ${this.props.content}`}
+            content='Add Task'
             icon='plus'
             labelPosition='left'
+            onClick={() => this.setState({isOpen: true})}
           />
         }
       >
         <Modal.Header>
-          Add {this.props.content}
+          Add Task
         </Modal.Header>
         <Modal.Content>
           <Modal.Description>
             <Form onSubmit={this.handleSubmit}>
               <Form.Field>
-                <label><h4>{this.props.content} Name:</h4></label>
+                <label><h4>Task Name:</h4></label>
                 <input
                   type='text'
                   name='taskTitle'
+                  required={true}
                   value={this.state.taskTitle}
                   onChange={this.handleInputChange}
-                  placeholder={`Your ${this.props.content}s name`}
+                  placeholder='Your Tasks name'
                 />
               </Form.Field>
               <Form.Field>

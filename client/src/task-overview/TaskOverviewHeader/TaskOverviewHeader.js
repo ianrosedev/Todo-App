@@ -9,10 +9,7 @@ const TaskOverviewHeader = (props) => (
     borderless
   >
     <Menu.Item header>
-      <AddNewTaskForm
-        content='Task'
-        {...props}
-      />
+      <AddNewTaskForm {...props} />
     </Menu.Item>
   </Menu>
 );

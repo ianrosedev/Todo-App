@@ -40,6 +40,7 @@ class MainContent extends Component {
             }
             _id={this.state.clickedTaskId}
             goBackHome={this.changeOverviewVisibility}
+            {...this.props}
           />
         }
       </div>

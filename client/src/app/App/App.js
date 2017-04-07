@@ -9,7 +9,7 @@ import './App.css';
 class App extends Component {
   state = { DATA: null };
 
-  newTask = async (task) => {
+  addNewTask = async (task) => {
     const response = await fetch(
       '/data/form',
       {
@@ -23,6 +23,10 @@ class App extends Component {
     const data = await response.json();
 
     this.setState({DATA: data});
+  };
+
+  addTask = async (task) => {
+    console.log(task);
   };
 
   deleteTask = async (id) => {
@@ -62,7 +66,8 @@ class App extends Component {
             DATA={this.state.DATA.TASK_LIST}
             deleteTask={this.deleteTask}
             changeTaskImportance={this.changeTaskImportance}
-            newTask={this.newTask}
+            addNewTask={this.addNewTask}
+            addTask={this.addTask}
           />
         </div>
       );

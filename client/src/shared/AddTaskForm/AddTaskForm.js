@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './AddTaskForm.css';
-import { Modal, Button, Form, TextArea } from 'semantic-ui-react';
+import { Modal, Button, Icon, Form, TextArea } from 'semantic-ui-react';
 
 class AddTaskForm extends Component {
   state = {
+    isOpen: false,
+    id: this.props.id,
     taskTitle: '',
     taskBody: ''
   };
@@ -12,32 +14,47 @@ class AddTaskForm extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-
-    // Close modal here!
   }
+
+  handleAddTask = (task) => (
+    this.props.addTask(task)
+  );
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.handleNewTask(this.state);
-  }
 
-  handleNewTask = (task) => (
-    this.props.newTask(task)
-  );
+    this.handleAddTask({
+      id: this.props._id,
+      name: this.props.content.toUpperCase(),
+      taskTitle: this.state.taskTitle,
+      taskBody: this.state.taskBody
+    });
+
+    this.setState({
+      isOpen: false,
+      taskTitle: '',
+      taskBody: ''
+    });
+  }
 
   render() {
     return (
       <Modal
         id='add-task-form'
         open={this.state.isOpen}
-        closeIcon='close'
-        closeOnDimmerClick={false}
+        closeIcon={
+          <Icon
+            name='close'
+            onClick={() => this.setState({isOpen: false})}
+          />
+        }
         trigger={
           <Button
             color='green'
             content={`Add ${this.props.content}`}
             icon='plus'
             labelPosition='left'
+            onClick={() => this.setState({isOpen: true})}
           />
         }
       >
@@ -52,6 +69,7 @@ class AddTaskForm extends Component {
                 <input
                   type='text'
                   name='taskTitle'
+                  required={true}
                   value={this.state.taskTitle}
                   onChange={this.handleInputChange}
                   placeholder={`Your ${this.props.content}s name`}
@@ -60,7 +78,9 @@ class AddTaskForm extends Component {
               <Form.Field>
                 <label><h4>{this.props.content}</h4></label>
                 <TextArea
+                  type='text'
                   name='taskBody'
+                  required={true}
                   value={this.state.taskBody}
                   onChange={this.handleInputChange}
                   placeholder='Tell us more...'
