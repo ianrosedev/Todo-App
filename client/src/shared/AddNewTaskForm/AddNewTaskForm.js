@@ -8,8 +8,8 @@ class AddNewTaskForm extends Component {
     isOpen: false,
     taskTitle: '',
     taskImportance: {
-      color: '',
-      level: null
+      color: 'blue',
+      level: 4
     }
   };
 
@@ -47,8 +47,8 @@ class AddNewTaskForm extends Component {
       isOpen: false,
       taskTitle: '',
       taskImportance: {
-        color: '',
-        importance: null
+        color: 'blue',
+        level: 4
       }
     });
   }
@@ -98,7 +98,7 @@ class AddNewTaskForm extends Component {
                     <Icon
                       name='square'
                       size='large'
-                      color={this.state.taskImportance.color || 'grey'}
+                      color={this.state.taskImportance.color}
                     />
                   }
                   handleChangeTaskImportance={
