@@ -7,6 +7,11 @@ class TaskInnerHeader extends Component {
     this.props.goBackHome()
   );
 
+  handleDeleteTask = () => {
+    this.props.deleteTask(this.props._id);
+    this.handleGoBackHome();
+  };
+
   render() {
     return (
       <Menu borderless id='task-inner-header'>
@@ -26,6 +31,7 @@ class TaskInnerHeader extends Component {
             <Button
               color='red'
               icon='delete'
+              onClick={this.handleDeleteTask}
             />
           </Menu.Item>
         </Menu.Menu>
