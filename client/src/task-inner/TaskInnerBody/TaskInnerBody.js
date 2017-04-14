@@ -3,36 +3,22 @@ import TaskModule from '../TaskModule/TaskModule';
 import './TaskInnerBody.css';
 
 const TaskInnerBody = (props) => {
+  const taskTypes =['ISSUES', 'QUESTIONS', 'NOTES', 'WEBSITES'];
+
+  const taskModules = taskTypes.map((item, i) => (
+    <TaskModule
+      key={props._id + i}
+      _id={props._id}
+      data={props.data[item]}
+      taskType={item}
+      addSubTask={props.addSubTask}
+      deleteSubTask={props.deleteSubTask}
+    />
+  ));
+
   return (
     <div id='task-inner-body'>
-      <TaskModule
-        data={props.data.ISSUES}
-        _id={props._id}
-        taskType='ISSUES'
-        addSubTask={props.addSubTask}
-        deleteSubTask={props.deleteSubTask}
-      />
-      <TaskModule
-        data={props.data.QUESTIONS}
-        _id={props._id}
-        taskType='QUESTIONS'
-        addSubTask={props.addSubTask}
-        deleteSubTask={props.deleteSubTask}
-       />
-      <TaskModule
-        data={props.data.NOTES}
-        _id={props._id}
-        taskType='NOTES'
-        addSubTask={props.addSubTask}
-        deleteSubTask={props.deleteSubTask}
-      />
-      <TaskModule
-        data={props.data.WEBSITES}
-        _id={props._id}
-        taskType='WEBSITES'
-        addSubTask={props.addSubTask}
-        deleteSubTask={props.deleteSubTask}
-      />
+      {taskModules}
     </div>
   );
 };

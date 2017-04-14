@@ -102,12 +102,12 @@ class App extends Component {
           <MainSidebar DATA={this.state.DATA.USER_INFO} />
           <MainContent
             DATA={this.state.DATA.TASK_LIST}
-            changeTaskImportance={this.changeTaskImportance}
             addNewTask={this.addNewTask}
             addSubTask={this.addSubTask}
-            editTask={this.editTask}
             deleteTask={this.deleteTask}
             deleteSubTask={this.deleteSubTask}
+            changeTaskImportance={this.changeTaskImportance}
+            editTask={this.editTask}
           />
         </div>
       );
