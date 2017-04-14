@@ -11,9 +11,7 @@ const ImportanceDropdown = (props) => {
       id={color}
       key={i}
       text={color[0].toUpperCase() + color.slice(1)}
-      onClick={
-        () => props.handleChangeTaskImportance(color, i)
-      }
+      onClick={() => props.handleChangeTaskImportance(color, i)}
     />
   ));
 
@@ -26,7 +24,6 @@ const ImportanceDropdown = (props) => {
         {importanceColorsDropdown}
       </Dropdown.Menu>
     </Dropdown>
-
   );
 };
 

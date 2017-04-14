@@ -71,6 +71,22 @@ class App extends Component {
     this.setState({DATA: data});
   }
 
+  editTask = async (task) => {
+    const response = await fetch(
+      '/data/form/edit/main',
+      {
+        method: 'PUT',
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(task),
+      }
+    );
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
   componentDidMount = async () => {
     const response = await fetch('/data');
     const data = await response.json();
@@ -89,6 +105,7 @@ class App extends Component {
             changeTaskImportance={this.changeTaskImportance}
             addNewTask={this.addNewTask}
             addSubTask={this.addSubTask}
+            editTask={this.editTask}
             deleteTask={this.deleteTask}
             deleteSubTask={this.deleteSubTask}
           />

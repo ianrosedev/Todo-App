@@ -673,6 +673,18 @@ app.put('/data/importance/:id/:color/:level', (req, res) => {
   res.json(FAKE_DATA);
 });
 
+app.put('/data/form/edit/main', (req, res) => {
+  const matchedItemIndex = FAKE_DATA.TASK_LIST.findIndex((item) => (
+    item.TASK_ID === req.body.id
+  ));
+
+  FAKE_DATA.TASK_LIST[matchedItemIndex].TASK_NAME = req.body.taskTitle;
+  FAKE_DATA.TASK_LIST[matchedItemIndex].IMPORTANCE.COLOR = req.body.taskImportance.color;
+  FAKE_DATA.TASK_LIST[matchedItemIndex].IMPORTANCE.LEVEL = req.body.taskImportance.level;
+
+  res.json(FAKE_DATA);
+});
+
 app.delete('/data/:id', (req, res) => {
   FAKE_DATA.TASK_LIST.splice(
     FAKE_DATA.TASK_LIST.findIndex((item) => (

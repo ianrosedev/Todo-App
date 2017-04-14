@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
+import UpdateTaskForm from '../../shared/UpdateTaskForm/UpdateTaskForm';
 import './TaskDescription.css';
 import { Segment, Icon } from 'semantic-ui-react';
 
@@ -8,12 +9,12 @@ class TaskDescription extends Component {
     this.props.getTaskId(this.props._id)
   );
 
-  handleDeleteTask = () => (
-    this.props.deleteTask(this.props._id)
-  );
-
   handleChangeTaskImportance = (color, level) => (
     this.props.changeTaskImportance(this.props._id, color, level)
+  );
+
+  handleDeleteTask = () => (
+    this.props.deleteTask(this.props._id)
   );
 
   render() {
@@ -41,7 +42,12 @@ class TaskDescription extends Component {
           onClick={this.handleDeleteTask}
         />
         <Icon name='checkmark' />
-        <Icon name='edit' />
+        <UpdateTaskForm
+          taskTitle={this.props.task}
+          color={this.props.color}
+          editTask={this.props.editTask}
+          _id={this.props._id}
+        />
       </Segment>
     );
   }
