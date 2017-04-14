@@ -9,7 +9,10 @@ const TaskModule = (props) => {
     .map((task, i) => (
       <Task
         _id={props._id}
+        subId={task.TASK_ID}
         key={i}
+        taskType={props.taskType}
+        deleteSubTask={props.deleteSubTask}
         title={task.title}
         body={task.body}
       />

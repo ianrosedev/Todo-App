@@ -683,6 +683,23 @@ app.delete('/data/:id', (req, res) => {
   res.json(FAKE_DATA);
 });
 
+app.delete('/data/:id/:taskType/:subId', (req, res) => {
+  const matchedItemIndex = FAKE_DATA.TASK_LIST.findIndex((item) => (
+    item.TASK_ID === Number(req.params.id)
+  ));
+
+  const matchedSubItemIndex =
+    FAKE_DATA.TASK_LIST[matchedItemIndex][req.params.taskType].findIndex((item) => (
+      item.TASK_ID === Number(req.params.subId)
+  ));
+
+  FAKE_DATA.TASK_LIST[matchedItemIndex][req.params.taskType].splice(
+    matchedSubItemIndex, 1
+  );
+
+  res.json(FAKE_DATA);
+});
+
 app.set('port', (process.env.PORT || 3001));
 
 app.listen(app.get('port'), () => {

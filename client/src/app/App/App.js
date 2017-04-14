@@ -51,6 +51,16 @@ class App extends Component {
     this.setState({DATA: data});
   }
 
+  deleteSubTask = async (id, taskType, subId) => {
+    const response = await fetch(
+      `/data/${id}/${taskType}/${subId}`,
+      { method: 'DELETE' }
+    );
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
   changeTaskImportance = async (id, color, level) => {
     const response = await fetch(
       `/data/importance/${id}/${color}/${level}`,
@@ -76,10 +86,11 @@ class App extends Component {
           <MainSidebar DATA={this.state.DATA.USER_INFO} />
           <MainContent
             DATA={this.state.DATA.TASK_LIST}
-            deleteTask={this.deleteTask}
             changeTaskImportance={this.changeTaskImportance}
             addNewTask={this.addNewTask}
             addSubTask={this.addSubTask}
+            deleteTask={this.deleteTask}
+            deleteSubTask={this.deleteSubTask}
           />
         </div>
       );
