@@ -5,7 +5,6 @@
 #task-description strong:hover,
 #task-description .square:hover,
 #task-description .edit:hover,
-#task-description .checkmark:hover,
 #task-description .remove:hover {
   cursor: pointer;
 }
@@ -33,11 +32,6 @@
 #task-description .edit {
   float: right;
   color: blue;
-}
-
-#task-description .checkmark {
-  float: right;
-  color: green;
 }
 
 #task-description .remove {

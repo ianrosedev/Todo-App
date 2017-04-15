@@ -41,7 +41,6 @@ class TaskDescription extends Component {
           name='remove'
           onClick={this.handleDeleteTask}
         />
-        <Icon name='checkmark' />
         <UpdateTaskForm
           taskTitle={this.props.task}
           color={this.props.color}

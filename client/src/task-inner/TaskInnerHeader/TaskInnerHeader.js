@@ -25,10 +25,6 @@ class TaskInnerHeader extends Component {
               onClick={this.handleGoBackHome}
             />
             <Button
-              color='green'
-              icon='checkmark'
-            />
-            <Button
               color='red'
               icon='delete'
               onClick={this.handleDeleteTask}
