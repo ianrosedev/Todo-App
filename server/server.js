@@ -678,9 +678,30 @@ app.put('/data/form/edit/main', (req, res) => {
     item.TASK_ID === req.body.id
   ));
 
-  FAKE_DATA.TASK_LIST[matchedItemIndex].TASK_NAME = req.body.taskTitle;
-  FAKE_DATA.TASK_LIST[matchedItemIndex].IMPORTANCE.COLOR = req.body.taskImportance.color;
-  FAKE_DATA.TASK_LIST[matchedItemIndex].IMPORTANCE.LEVEL = req.body.taskImportance.level;
+  const matchedTask = FAKE_DATA.TASK_LIST[matchedItemIndex];
+
+  matchedTask.TASK_NAME = req.body.taskTitle;
+  matchedTask.IMPORTANCE.COLOR = req.body.taskImportance.color;
+  matchedTask.IMPORTANCE.LEVEL = req.body.taskImportance.level;
+
+  res.json(FAKE_DATA);
+});
+
+app.put('/data/form/edit/sub', (req, res) => {
+  const matchedItemIndex = FAKE_DATA.TASK_LIST.findIndex((item) => (
+    item.TASK_ID === req.body.id
+  ));
+
+  const matchedItemSubIndex = FAKE_DATA.TASK_LIST[matchedItemIndex]
+                              [req.body.taskTitle]
+                              .findIndex((task) => (
+                                task.TASK_ID === req.body.subId
+                              ));
+
+  const matchedTask = FAKE_DATA.TASK_LIST[matchedItemIndex][req.body.taskTitle][matchedItemSubIndex];
+
+  matchedTask.title = req.body.title;
+  matchedTask.body = req.body.body;
 
   res.json(FAKE_DATA);
 });

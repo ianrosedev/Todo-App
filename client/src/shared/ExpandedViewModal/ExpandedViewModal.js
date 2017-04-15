@@ -5,12 +5,7 @@ import { Modal, Icon } from 'semantic-ui-react';
 const ExpandedViewModal = (props) => (
   <Modal
     id='expanded-view-modal'
-    trigger={
-      <span>
-        <strong>{props.title}</strong>
-        <Icon name='expand' />
-      </span>
-    }
+    trigger={<Icon name='expand' />}
   >
     <Modal.Header>
       {props.title}

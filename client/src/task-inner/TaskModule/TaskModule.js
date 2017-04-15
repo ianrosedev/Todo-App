@@ -8,13 +8,15 @@ const TaskModule = (props) => {
     .slice(1)
     .map((task, i) => (
       <Task
-        _id={props._id}
-        subId={task.TASK_ID}
         key={i}
+        _id={props._id}
+        taskTitle={props.taskTitle}
+        subId={task.TASK_ID}
         taskType={props.taskType}
-        deleteSubTask={props.deleteSubTask}
         title={task.title}
         body={task.body}
+        deleteSubTask={props.deleteSubTask}
+        editSubTask={props.editSubTask}
       />
     )
   );
