@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StatusViewDropdown from '../../shared/StatusViewDropdown/StatusViewDropdown';
 import './TaskInnerHeader.css'
 import { Menu, Button } from 'semantic-ui-react';
 
@@ -20,6 +21,10 @@ class TaskInnerHeader extends Component {
         </Menu.Item>
         <Menu.Menu position='right'>
           <Menu.Item>
+            <StatusViewDropdown
+              updateStatusView={this.props.updateStatusView}
+              status={this.props.status}
+            />
             <Button
               icon='level up'
               onClick={this.handleGoBackHome}

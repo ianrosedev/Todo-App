@@ -6,19 +6,39 @@ import { Segment } from 'semantic-ui-react';
 const TaskModule = (props) => {
   const tasks = props.data
     .slice(1)
-    .map((task, i) => (
-      <Task
-        key={i}
-        _id={props._id}
-        taskTitle={props.taskTitle}
-        subId={task.TASK_ID}
-        taskType={props.taskType}
-        title={task.title}
-        body={task.body}
-        deleteSubTask={props.deleteSubTask}
-        editSubTask={props.editSubTask}
-      />
-    )
+    .map((task, i) => {
+      if (task.STATUS === props.status) {
+        return (
+          <Task
+            key={i}
+            _id={props._id}
+            taskTitle={props.taskTitle}
+            subId={task.TASK_ID}
+            taskType={props.taskType}
+            title={task.title}
+            body={task.body}
+            deleteSubTask={props.deleteSubTask}
+            editSubTask={props.editSubTask}
+          />
+        );
+      } else if (props.status === 'ALL') {
+        return (
+          <Task
+            key={i}
+            _id={props._id}
+            taskTitle={props.taskTitle}
+            subId={task.TASK_ID}
+            taskType={props.taskType}
+            title={task.title}
+            body={task.body}
+            deleteSubTask={props.deleteSubTask}
+            editSubTask={props.editSubTask}
+          />
+        );
+      } else {
+        return null;
+      }
+    }
   );
 
   return (

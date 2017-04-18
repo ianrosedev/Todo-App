@@ -7,7 +7,7 @@ const ImportanceDropdown = (props) => {
 
   const importanceColorsDropdown = importanceColors.map((color, i) => (
     <Dropdown.Item
-      className='dropdown'
+      className='importance-dropdown'
       id={color}
       key={i}
       text={color[0].toUpperCase() + color.slice(1)}
