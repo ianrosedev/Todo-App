@@ -27,6 +27,7 @@ class TaskInnerHeader extends Component {
             />
             <Button
               icon='level up'
+              color='blue'
               onClick={this.handleGoBackHome}
             />
             <Button

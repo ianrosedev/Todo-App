@@ -9,9 +9,6 @@ const ExpandedViewModal = (props) => (
   >
     <Modal.Header>
       {props.title}
-      <Icon name='remove' />
-      <Icon name='checkmark' />
-      <Icon name='edit' />
     </Modal.Header>
     <Modal.Content>
       <Modal.Description>
