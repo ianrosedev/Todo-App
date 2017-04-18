@@ -10,8 +10,9 @@ const TaskModule = (props) => {
       if (task.STATUS === props.status) {
         return (
           <Task
-            key={i}
+            key={props._id + i}
             _id={props._id}
+            status={props.status}
             taskTitle={props.taskTitle}
             subId={task.TASK_ID}
             taskType={props.taskType}
@@ -19,13 +20,15 @@ const TaskModule = (props) => {
             body={task.body}
             deleteSubTask={props.deleteSubTask}
             editSubTask={props.editSubTask}
+            subTaskCompleted={props.subTaskCompleted}
           />
         );
       } else if (props.status === 'ALL') {
         return (
           <Task
             key={i}
-            _id={props._id}
+            _id={props._id + i}
+            status={props.status}
             taskTitle={props.taskTitle}
             subId={task.TASK_ID}
             taskType={props.taskType}
@@ -33,6 +36,7 @@ const TaskModule = (props) => {
             body={task.body}
             deleteSubTask={props.deleteSubTask}
             editSubTask={props.editSubTask}
+            subTaskCompleted={props.subTaskCompleted}
           />
         );
       } else {

@@ -16,6 +16,7 @@ const TaskInnerBody = (props) => {
       addSubTask={props.addSubTask}
       deleteSubTask={props.deleteSubTask}
       editSubTask={props.editSubTask}
+      subTaskCompleted={props.subTaskCompleted}
     />
   ));
 

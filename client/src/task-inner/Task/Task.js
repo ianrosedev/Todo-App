@@ -9,6 +9,10 @@ class Task extends Component {
     this.props.deleteSubTask(this.props._id, this.props.taskType, this.props.subId)
   );
 
+  handleSubTaskCompleted = () => (
+    this.props.subTaskCompleted(this.props._id, this.props.taskType, this.props.subId)
+  );
+
   render() {
     const compactedBodyText = (this.props.body.length >= 200) ?
           this.props.body.slice(0, 197) + '...' :
@@ -22,7 +26,10 @@ class Task extends Component {
           name='remove'
           onClick={this.handleDeleteSubTask}
         />
-        <Icon name='checkmark' />
+        <Icon
+          name='checkmark'
+          onClick={this.handleSubTaskCompleted}
+        />
         <UpdateSubTaskForm
           _id={this.props._id}
           subId={this.props.subId}

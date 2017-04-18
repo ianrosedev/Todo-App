@@ -737,6 +737,21 @@ app.put('/data/importance/:id/:color/:level', (req, res) => {
   res.json(FAKE_DATA);
 });
 
+app.put('/data/completed/:id/:taskType/:subId', (req, res) => {
+  const matchedItemIndex = FAKE_DATA.TASK_LIST.findIndex((item) => (
+    item.TASK_ID === Number(req.params.id)
+  ));
+
+  const matchedSubItemIndex =
+    FAKE_DATA.TASK_LIST[matchedItemIndex][req.params.taskType].findIndex((item) => (
+      item.TASK_ID === Number(req.params.subId)
+  ));
+
+  FAKE_DATA.TASK_LIST[matchedItemIndex][req.params.taskType][matchedSubItemIndex].STATUS = 'COMPLETED';
+
+  res.json(FAKE_DATA);
+});
+
 app.put('/data/form/edit/main', (req, res) => {
   const matchedItemIndex = FAKE_DATA.TASK_LIST.findIndex((item) => (
     item.TASK_ID === req.body.id

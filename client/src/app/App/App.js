@@ -20,6 +20,7 @@ class App extends Component {
         body: JSON.stringify(task),
       }
     );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -36,6 +37,7 @@ class App extends Component {
         body: JSON.stringify(task),
       }
     );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -46,6 +48,7 @@ class App extends Component {
       `/data/${id}`,
       { method: 'DELETE' }
     );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -56,6 +59,7 @@ class App extends Component {
       `/data/${id}/${taskType}/${subId}`,
       { method: 'DELETE' }
     );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -66,6 +70,18 @@ class App extends Component {
       `/data/importance/${id}/${color}/${level}`,
       { method: 'PUT' }
     );
+
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
+  subTaskCompleted = async (id, taskType, subId) => {
+    const response = await fetch(
+      `/data/completed/${id}/${taskType}/${subId}`,
+      { method: 'PUT' }
+    );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -82,6 +98,7 @@ class App extends Component {
         body: JSON.stringify(task),
       }
     );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -98,6 +115,7 @@ class App extends Component {
         body: JSON.stringify(task),
       }
     );
+
     const data = await response.json();
 
     this.setState({DATA: data});
@@ -123,6 +141,7 @@ class App extends Component {
             deleteTask={this.deleteTask}
             deleteSubTask={this.deleteSubTask}
             changeTaskImportance={this.changeTaskImportance}
+            subTaskCompleted={this.subTaskCompleted}
             editTask={this.editTask}
             editSubTask={this.editSubTask}
           />
