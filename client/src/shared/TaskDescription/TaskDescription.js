@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
 import UpdateTaskForm from '../../shared/UpdateTaskForm/UpdateTaskForm';
+import ConfirmDelete from '../../shared/ConfirmDelete/ConfirmDelete';
 import './TaskDescription.css';
 import { Segment, Icon } from 'semantic-ui-react';
 
@@ -37,10 +38,9 @@ class TaskDescription extends Component {
         <strong onClick={this.handleGetTaskId}>
           {this.props.task}
         </strong>
-        <Icon
-          name='remove'
-          onClick={this.handleDeleteTask}
-        />
+        <ConfirmDelete handleDelete={this.handleDeleteTask}>
+          <Icon name='remove' />
+        </ConfirmDelete>
         <UpdateTaskForm
           taskTitle={this.props.task}
           color={this.props.color}
@@ -50,6 +50,6 @@ class TaskDescription extends Component {
       </Segment>
     );
   }
-}
+};
 
 export default TaskDescription;

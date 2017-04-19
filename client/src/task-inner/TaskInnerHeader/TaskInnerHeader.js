@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StatusViewDropdown from '../../shared/StatusViewDropdown/StatusViewDropdown';
+import ConfirmDelete from '../../shared/ConfirmDelete/ConfirmDelete';
 import './TaskInnerHeader.css'
 import { Menu, Button } from 'semantic-ui-react';
 
@@ -30,11 +31,12 @@ class TaskInnerHeader extends Component {
               color='blue'
               onClick={this.handleGoBackHome}
             />
-            <Button
-              color='red'
-              icon='delete'
-              onClick={this.handleDeleteTask}
-            />
+            <ConfirmDelete handleDelete={this.handleDeleteTask}>
+              <Button
+                color='red'
+                icon='delete'
+              />
+            </ConfirmDelete>
           </Menu.Item>
         </Menu.Menu>
       </Menu>

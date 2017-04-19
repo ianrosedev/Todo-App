@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ExpandedViewModal from '../../shared/ExpandedViewModal/ExpandedViewModal';
 import UpdateSubTaskForm from '../../shared/UpdateSubTaskForm/UpdateSubTaskForm';
+import ConfirmDelete from '../../shared/ConfirmDelete/ConfirmDelete';
 import './Task.css';
 import { Segment, Icon } from 'semantic-ui-react';
 
@@ -22,10 +23,9 @@ class Task extends Component {
       <Segment id='task'>
         <ExpandedViewModal {...this.props} />
         <strong>{this.props.title}</strong>
-        <Icon
-          name='remove'
-          onClick={this.handleDeleteSubTask}
-        />
+        <ConfirmDelete handleDelete={this.handleDeleteSubTask}>
+          <Icon name='remove' />
+        </ConfirmDelete>
         <Icon
           name='checkmark'
           onClick={this.handleSubTaskCompleted}
