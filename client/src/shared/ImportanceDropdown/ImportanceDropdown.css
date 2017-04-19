@@ -1,19 +1,19 @@
-.importance-dropdown #black {
+.dropdown #black {
   color: black;
 }
 
-.importance-dropdown #red {
+.dropdown #red {
   color: red;
 }
 
-.importance-dropdown #orange {
+.dropdown #orange {
   color: orange;
 }
 
-.importance-dropdown #green {
+.dropdown #green {
   color: green;
 }
 
-.importance-dropdown #blue {
-color: blue;
+.dropdown #blue {
+  color: blue;
 }
