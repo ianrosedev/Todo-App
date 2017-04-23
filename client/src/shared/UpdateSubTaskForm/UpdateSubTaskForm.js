@@ -38,7 +38,7 @@ class UpdateSubTaskForm extends Component {
   render() {
     return (
       <Modal
-        id='update-task-form'
+        id='update-sub-task-form'
         open={this.state.isOpen}
         closeIcon={
           <Icon

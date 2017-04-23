@@ -1,0 +1,13 @@
+#update-sub-task-form label {
+  float: left;
+  margin-right: 10px;
+}
+
+#update-sub-task-form .close {
+  color: dimgrey;
+}
+
+#update-sub-task-form.ui.modal > .close {
+  top: 1.0535rem;
+  right: 1rem;
+}

@@ -1,0 +1,8 @@
+#update-task-form .close {
+  color: dimgrey;
+}
+
+#update-task-form.ui.modal > .close {
+  top: 1.0535rem;
+  right: 1rem;
+}

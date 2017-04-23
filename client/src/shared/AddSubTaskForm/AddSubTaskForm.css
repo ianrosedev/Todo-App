@@ -1,5 +1,5 @@
 #add-sub-task-form .close {
-  color: red;
+  color: dimgrey;
 }
 
 #add-sub-task-form.ui.modal > .close {
