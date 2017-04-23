@@ -69,10 +69,10 @@ class addSubTaskForm extends Component {
                 <input
                   type='text'
                   name='taskTitle'
-                  required={true}
                   value={this.state.taskTitle}
                   onChange={this.handleInputChange}
                   placeholder={`Your ${this.props.content}s name`}
+                  required={true}
                 />
               </Form.Field>
               <Form.Field>
@@ -98,6 +98,6 @@ class addSubTaskForm extends Component {
       </Modal>
     );
   }
-}
+};
 
 export default addSubTaskForm;

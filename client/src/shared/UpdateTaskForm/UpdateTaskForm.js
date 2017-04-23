@@ -117,6 +117,6 @@ class UpdateTaskForm extends Component {
       </Modal>
     );
   }
-}
+};
 
 export default UpdateTaskForm;

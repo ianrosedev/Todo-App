@@ -85,10 +85,10 @@ class AddNewTaskForm extends Component {
                 <input
                   type='text'
                   name='taskTitle'
-                  required={true}
                   value={this.state.taskTitle}
                   onChange={this.handleInputChange}
                   placeholder='Your Tasks name'
+                  required={true}
                 />
               </Form.Field>
               <Form.Field>
@@ -117,6 +117,6 @@ class AddNewTaskForm extends Component {
       </Modal>
     );
   }
-}
+};
 
 export default AddNewTaskForm;

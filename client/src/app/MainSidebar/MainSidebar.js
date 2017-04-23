@@ -4,7 +4,7 @@ import './MainSidebar.css';
 
 const MainSidebar = (props) => (
   <div id='main-sidebar'>
-    <UserInfo {...props} />
+    <UserInfo data={props.DATA} />
   </div>
 );
 
