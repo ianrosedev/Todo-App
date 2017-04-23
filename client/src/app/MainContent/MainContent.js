@@ -43,8 +43,11 @@ class MainContent extends Component {
             }
             _id={this.state.clickedTaskId}
             goBackHome={this.goBackHome}
+            addSubTask={this.props.addSubTask}
+            deleteTask={this.props.deleteTask}
+            deleteSubTask={this.props.deleteSubTask}
+            editSubTask={this.props.editSubTask}
             subTaskCompleted={this.props.subTaskCompleted}
-            {...this.props}
           />
         }
       </div>

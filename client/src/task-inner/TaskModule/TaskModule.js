@@ -26,8 +26,8 @@ const TaskModule = (props) => {
       } else if (props.status === 'ALL') {
         return (
           <Task
-            key={i}
-            _id={props._id + i}
+            key={props._id + i}
+            _id={props._id}
             status={props.status}
             taskTitle={props.taskTitle}
             subId={task.TASK_ID}

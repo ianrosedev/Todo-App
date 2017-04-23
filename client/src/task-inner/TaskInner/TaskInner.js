@@ -14,14 +14,22 @@ class TaskInner extends Component {
     return (
       <div id='task-inner'>
         <TaskInnerHeader
-          updateStatusView={this.updateStatusView}
+          _id={this.props._id}
+          taskName={this.props.data.TASK_NAME}
           status={this.state.status}
-          {...this.props}
+          updateStatusView={this.updateStatusView}
+          deleteTask={this.props.deleteTask}
+          goBackHome={this.props.goBackHome}
         />
 
         <TaskInnerBody
+          data={this.props.data}
+          _id={this.props._id}
           status={this.state.status}
-          {...this.props}
+          addSubTask={this.props.addSubTask}
+          deleteSubTask={this.props.deleteSubTask}
+          editSubTask={this.props.editSubTask}
+          subTaskCompleted={this.props.subTaskCompleted}
         />
       </div>
     );

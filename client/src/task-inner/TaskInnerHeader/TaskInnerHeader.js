@@ -18,7 +18,7 @@ class TaskInnerHeader extends Component {
     return (
       <Menu borderless id='task-inner-header'>
         <Menu.Item header>
-          <h3>{this.props.data.TASK_NAME}</h3>
+          <h3>{this.props.taskName}</h3>
         </Menu.Item>
         <Menu.Menu position='right'>
           <Menu.Item>
