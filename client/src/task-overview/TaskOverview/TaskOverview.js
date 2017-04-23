@@ -6,7 +6,13 @@ import './TaskOverview.css';
 const TaskOverview = (props) => (
   <div id='task-overview'>
     <TaskOverviewHeader addNewTask={props.addNewTask} />
-    <TaskOverviewBody {...props} />
+    <TaskOverviewBody
+      data={props.data}
+      viewTaskBody={props.viewTaskBody}
+      deleteTask={props.deleteTask}
+      editTask={props.editTask}
+      changeTaskImportance={props.changeTaskImportance}
+    />
   </div>
 );
 

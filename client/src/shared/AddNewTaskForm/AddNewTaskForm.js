@@ -94,17 +94,16 @@ class AddNewTaskForm extends Component {
               <Form.Field>
                 <label><h4>Task Importance:</h4></label>
                 <ImportanceDropdown
-                  icon={
-                    <Icon
-                      name='square'
-                      size='large'
-                      color={this.state.taskImportance.color}
-                    />
-                  }
                   handleChangeTaskImportance={
                     this.handleChangeTaskImportance
                   }
-                />
+                >
+                  <Icon
+                    name='square'
+                    size='large'
+                    color={this.state.taskImportance.color}
+                  />
+                </ImportanceDropdown>
               </Form.Field>
               <Button
                 type='submit'

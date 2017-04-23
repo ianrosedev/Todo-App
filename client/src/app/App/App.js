@@ -65,28 +65,6 @@ class App extends Component {
     this.setState({DATA: data});
   }
 
-  changeTaskImportance = async (id, color, level) => {
-    const response = await fetch(
-      `/data/importance/${id}/${color}/${level}`,
-      { method: 'PUT' }
-    );
-
-    const data = await response.json();
-
-    this.setState({DATA: data});
-  }
-
-  subTaskCompleted = async (id, taskType, subId) => {
-    const response = await fetch(
-      `/data/completed/${id}/${taskType}/${subId}`,
-      { method: 'PUT' }
-    );
-
-    const data = await response.json();
-
-    this.setState({DATA: data});
-  }
-
   editTask = async (task) => {
     const response = await fetch(
       '/data/form/edit/main',
@@ -121,6 +99,28 @@ class App extends Component {
     this.setState({DATA: data});
   }
 
+  changeTaskImportance = async (id, color, level) => {
+    const response = await fetch(
+      `/data/importance/${id}/${color}/${level}`,
+      { method: 'PUT' }
+    );
+
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
+  subTaskCompleted = async (id, taskType, subId) => {
+    const response = await fetch(
+      `/data/completed/${id}/${taskType}/${subId}`,
+      { method: 'PUT' }
+    );
+
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
+
   componentDidMount = async () => {
     const response = await fetch('/data');
     const data = await response.json();
@@ -140,10 +140,10 @@ class App extends Component {
             addSubTask={this.addSubTask}
             deleteTask={this.deleteTask}
             deleteSubTask={this.deleteSubTask}
-            changeTaskImportance={this.changeTaskImportance}
-            subTaskCompleted={this.subTaskCompleted}
             editTask={this.editTask}
             editSubTask={this.editSubTask}
+            changeTaskImportance={this.changeTaskImportance}
+            subTaskCompleted={this.subTaskCompleted}
           />
         </div>
       );

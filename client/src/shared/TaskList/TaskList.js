@@ -3,7 +3,6 @@ import TaskDescription from '../TaskDescription/TaskDescription';
 import { Icon } from 'semantic-ui-react';
 
 const TaskList = (props) => {
-
   const tasksSortedByImportance = props.data.sort((a, b) => (
     a.IMPORTANCE.LEVEL - b.IMPORTANCE.LEVEL
   ));

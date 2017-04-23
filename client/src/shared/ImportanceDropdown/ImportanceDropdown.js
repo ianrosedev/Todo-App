@@ -16,7 +16,7 @@ const ImportanceDropdown = (props) => {
 
   return (
     <Dropdown
-      icon={props.icon}
+      icon={props.children}
       size={props.size}
     >
       <Dropdown.Menu>

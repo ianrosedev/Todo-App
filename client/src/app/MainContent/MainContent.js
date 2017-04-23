@@ -9,18 +9,18 @@ class MainContent extends Component {
     clickedTaskId: null
   };
 
-  changeOverviewVisibility = () => (
-    this.setState({
-      isOverviewVisible: !this.state.isOverviewVisible
-    })
-  );
-
-  getTaskId = (id) => {
+  viewTaskBody = (id) => {
     this.setState({
       isOverviewVisible: false,
       clickedTaskId: id
     })
   };
+
+  goBackHome = () => (
+    this.setState({
+      isOverviewVisible: true
+    })
+  );
 
   render() {
     return (
@@ -28,8 +28,11 @@ class MainContent extends Component {
         {this.state.isOverviewVisible ?
           <TaskOverview
             data={this.props.DATA}
-            getTaskId={this.getTaskId}
-            {...this.props}
+            viewTaskBody={this.viewTaskBody}
+            addNewTask={this.props.addNewTask}
+            deleteTask={this.props.deleteTask}
+            editTask={this.props.editTask}
+            changeTaskImportance={this.props.changeTaskImportance}
           />
           :
           <TaskInner
@@ -39,7 +42,7 @@ class MainContent extends Component {
               )[0]
             }
             _id={this.state.clickedTaskId}
-            goBackHome={this.changeOverviewVisibility}
+            goBackHome={this.goBackHome}
             subTaskCompleted={this.props.subTaskCompleted}
             {...this.props}
           />

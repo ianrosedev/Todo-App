@@ -6,8 +6,8 @@ import './TaskDescription.css';
 import { Segment, Icon } from 'semantic-ui-react';
 
 class TaskDescription extends Component {
-  handleGetTaskId = () => (
-    this.props.getTaskId(this.props._id)
+  handleViewTaskBody = () => (
+    this.props.viewTaskBody(this.props._id)
   );
 
   handleChangeTaskImportance = (color, level) => (
@@ -25,27 +25,26 @@ class TaskDescription extends Component {
         color={this.props.color}
       >
         <ImportanceDropdown
-          icon={
-            <Icon
-              name='square'
-              color={this.props.color}
-            />
-          }
           handleChangeTaskImportance={
             this.handleChangeTaskImportance
           }
-        />
-        <strong onClick={this.handleGetTaskId}>
+        >
+          <Icon
+            name='square'
+            color={this.props.color}
+          />
+        </ImportanceDropdown>
+        <strong onClick={this.handleViewTaskBody}>
           {this.props.task}
         </strong>
         <ConfirmDelete handleDelete={this.handleDeleteTask}>
           <Icon name='remove' />
         </ConfirmDelete>
         <UpdateTaskForm
+          _id={this.props._id}
           taskTitle={this.props.task}
           color={this.props.color}
           editTask={this.props.editTask}
-          _id={this.props._id}
         />
       </Segment>
     );
