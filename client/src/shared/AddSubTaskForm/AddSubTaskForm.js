@@ -65,18 +65,18 @@ class addSubTaskForm extends Component {
           <Modal.Description>
             <Form onSubmit={this.handleSubmit}>
               <Form.Field>
-                <label><h4>{this.props.content} Name</h4></label>
+                <label><h4>{this.props.content}</h4></label>
                 <input
                   type='text'
                   name='taskTitle'
                   value={this.state.taskTitle}
                   onChange={this.handleInputChange}
-                  placeholder={`Your ${this.props.content}s name`}
+                  placeholder={`Your ${this.props.content}`}
                   required={true}
                 />
               </Form.Field>
               <Form.Field>
-                <label><h4>{this.props.content}</h4></label>
+                <label><h4>About your {this.props.content}</h4></label>
                 <TextArea
                   type='text'
                   name='taskBody'

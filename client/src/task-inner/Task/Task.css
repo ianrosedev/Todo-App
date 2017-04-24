@@ -1,3 +1,7 @@
+#task strong {
+  margin-left: 2px;
+}
+
 #task .expand:hover,
 #task .edit:hover,
 #task .checkmark:hover,

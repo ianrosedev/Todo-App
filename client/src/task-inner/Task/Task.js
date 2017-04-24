@@ -19,10 +19,25 @@ class Task extends Component {
           this.props.body.slice(0, 197) + '...' :
           this.props.body;
 
+    const testForHTTP =
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+
     return (
       <Segment id='task'>
         <ExpandedViewModal {...this.props} />
-        <strong>{this.props.title}</strong>
+        <strong>
+          {
+            (this.props.taskType !== 'WEBSITES') ?
+            this.props.title :
+            <a href={
+              (testForHTTP.test(this.props.title)) ?
+                this.props.title :
+                'https://' + this.props.title
+            } target='_blank'>
+              {this.props.title}
+            </a>
+          }
+        </strong>
         <ConfirmDelete handleDelete={this.handleDeleteSubTask}>
           <Icon name='remove' />
         </ConfirmDelete>
