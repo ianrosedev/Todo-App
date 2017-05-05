@@ -1,7 +1,5 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import uuidV4 from 'uuid/v4';
 
 const app = express();
 
