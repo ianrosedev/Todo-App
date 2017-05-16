@@ -7,23 +7,7 @@ const TaskModule = (props) => {
   const tasks = props.data
     .slice(1)
     .map((task, i) => {
-      if (task.STATUS === props.status) {
-        return (
-          <Task
-            key={props._id + i}
-            _id={props._id}
-            status={props.status}
-            taskTitle={props.taskTitle}
-            subId={task.TASK_ID}
-            taskType={props.taskType}
-            title={task.title}
-            body={task.body}
-            deleteSubTask={props.deleteSubTask}
-            editSubTask={props.editSubTask}
-            subTaskCompleted={props.subTaskCompleted}
-          />
-        );
-      } else if (props.status === 'ALL') {
+      if (props.status === task.STATUS || props.status === 'ALL') {
         return (
           <Task
             key={props._id + i}
