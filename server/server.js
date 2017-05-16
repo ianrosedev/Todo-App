@@ -1,3 +1,8 @@
+/*********************************************
+  !!!NOT For production use!!!!
+  Just for the purpose of an example API!
+**********************************************/
+
 import express from 'express';
 import bodyParser from 'body-parser';
 
@@ -5,6 +10,7 @@ const app = express();
 
 let ID_NUMBER = 0;
 
+// Default fake data for example //
 const FAKE_DATA = {
   USER_ID: ID_NUMBER++,
   USER_INFO: {

@@ -129,27 +129,27 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.DATA) {
+    if (!this.state.DATA) {
       return (
-        <div>
-          <MainHeader />
-          <MainSidebar DATA={this.state.DATA.USER_INFO} />
-          <MainContent
-            DATA={this.state.DATA.TASK_LIST}
-            addNewTask={this.addNewTask}
-            addSubTask={this.addSubTask}
-            deleteTask={this.deleteTask}
-            deleteSubTask={this.deleteSubTask}
-            editTask={this.editTask}
-            editSubTask={this.editSubTask}
-            changeTaskImportance={this.changeTaskImportance}
-            subTaskCompleted={this.subTaskCompleted}
-          />
-        </div>
+        <Loading />
       );
     }
     return (
-      <Loading />
+      <div>
+        <MainHeader />
+        <MainSidebar DATA={this.state.DATA.USER_INFO} />
+        <MainContent
+          DATA={this.state.DATA.TASK_LIST}
+          addNewTask={this.addNewTask}
+          addSubTask={this.addSubTask}
+          deleteTask={this.deleteTask}
+          deleteSubTask={this.deleteSubTask}
+          editTask={this.editTask}
+          editSubTask={this.editSubTask}
+          changeTaskImportance={this.changeTaskImportance}
+          subTaskCompleted={this.subTaskCompleted}
+        />
+      </div>
     );
   }
 };
