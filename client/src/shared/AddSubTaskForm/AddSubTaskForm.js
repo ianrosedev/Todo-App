@@ -51,7 +51,7 @@ class addSubTaskForm extends Component {
         trigger={
           <Button
             color='green'
-            content={`Add ${this.props.content}`}
+            content={this.props.content}
             icon='plus'
             labelPosition='left'
             onClick={() => this.setState({isOpen: true})}
@@ -59,7 +59,7 @@ class addSubTaskForm extends Component {
         }
       >
         <Modal.Header>
-          Add {this.props.content}
+          New {this.props.content}
         </Modal.Header>
         <Modal.Content>
           <Modal.Description>

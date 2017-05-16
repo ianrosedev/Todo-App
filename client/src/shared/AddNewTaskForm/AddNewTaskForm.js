@@ -67,7 +67,7 @@ class AddNewTaskForm extends Component {
         trigger={
           <Button
             color='green'
-            content='Add Task'
+            content='Task'
             icon='plus'
             labelPosition='left'
             onClick={() => this.setState({isOpen: true})}
@@ -75,7 +75,7 @@ class AddNewTaskForm extends Component {
         }
       >
         <Modal.Header>
-          Add Task
+          New Task
         </Modal.Header>
         <Modal.Content>
           <Modal.Description>
