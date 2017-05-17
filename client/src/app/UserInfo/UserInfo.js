@@ -1,29 +1,32 @@
 import React from 'react';
-import { Card, Image, Button } from 'semantic-ui-react';
+import UpdateProfileForm from '../../shared/UpdateProfileForm/UpdateProfileForm';
+import { Card, Image } from 'semantic-ui-react';
 
 const UserInfo = (props) => {
-  const data = props.data;
-
   return (
     <Card>
-      <Image src={data.IMAGE} />
+      <Image
+        src={props.data.IMAGE}
+        width={209}
+        height={209} 
+      />
       <Card.Content>
         <Card.Header>
-          {data.USER_NAME}
+          {props.data.USER_NAME}
         </Card.Header>
         <Card.Meta>
-          Joined in {data.JOINED}
+          Joined in {props.data.JOINED}
         </Card.Meta>
         <Card.Description>
-          {data.SAYING}
+          {props.data.SAYING}
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Button
-          size='tiny'
-          icon='edit'
-          labelPosition='left'
-          content='Edit Profile'
+        <UpdateProfileForm
+          name={props.data.USER_NAME}
+          image={props.data.IMAGE}
+          saying={props.data.SAYING}
+          editProfile={props.editProfile}
         />
       </Card.Content>
     </Card>

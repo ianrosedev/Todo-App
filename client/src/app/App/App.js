@@ -17,7 +17,7 @@ class App extends Component {
         headers: new Headers({
           'Content-Type': 'application/json'
         }),
-        body: JSON.stringify(task),
+        body: JSON.stringify(task)
       }
     );
 
@@ -34,7 +34,7 @@ class App extends Component {
         headers: new Headers({
           'Content-Type': 'application/json'
         }),
-        body: JSON.stringify(task),
+        body: JSON.stringify(task)
       }
     );
 
@@ -73,7 +73,7 @@ class App extends Component {
         headers: new Headers({
           'Content-Type': 'application/json'
         }),
-        body: JSON.stringify(task),
+        body: JSON.stringify(task)
       }
     );
 
@@ -90,7 +90,7 @@ class App extends Component {
         headers: new Headers({
           'Content-Type': 'application/json'
         }),
-        body: JSON.stringify(task),
+        body: JSON.stringify(task)
       }
     );
 
@@ -98,6 +98,23 @@ class App extends Component {
 
     this.setState({DATA: data});
   }
+
+  editProfile = async (profile) => {
+    const response = await fetch(
+      '/data/form/edit/profile',
+      {
+        method: 'PUT',
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(profile)
+      }
+    );
+
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  };
 
   changeTaskImportance = async (id, color, level) => {
     const response = await fetch(
@@ -137,7 +154,10 @@ class App extends Component {
     return (
       <div>
         <MainHeader />
-        <MainSidebar DATA={this.state.DATA.USER_INFO} />
+        <MainSidebar
+          DATA={this.state.DATA.USER_INFO}
+          editProfile={this.editProfile}
+        />
         <MainContent
           DATA={this.state.DATA.TASK_LIST}
           addNewTask={this.addNewTask}

@@ -1,14 +1,14 @@
 {
   "name": "TodoApp",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Todo App Example",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ianrosedev/Todo-App.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ian Rose",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ianrosedev/Todo-App/issues"

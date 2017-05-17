@@ -63,14 +63,7 @@ class UpdateTaskForm extends Component {
         trigger={
           <Icon
             name='edit'
-            onClick={() => this.setState({
-              isOpen: true,
-              taskTitle: this.props.taskTitle,
-              taskImportance: {
-                color: this.props.color,
-                level: this.colors.indexOf(this.props.color)
-              }
-            })}
+            onClick={() => this.setState({isOpen: true})}
           />
         }
       >

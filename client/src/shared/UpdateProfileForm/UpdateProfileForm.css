@@ -1,0 +1,17 @@
+#update-profile-form label {
+  float: left;
+  margin-right: 10px;
+}
+
+#update-profile-form .close {
+  color: dimgrey;
+}
+
+#update-profile-form.ui.modal > .close {
+  top: 1.0535rem;
+  right: 1rem;
+}
+
+.warning {
+  color: red;
+}

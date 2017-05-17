@@ -49,11 +49,7 @@ class UpdateSubTaskForm extends Component {
         trigger={
           <Icon
             name='edit'
-            onClick={() => this.setState({
-              isOpen: true,
-              title: this.props.title,
-              body: this.props.body
-            })}
+            onClick={() => this.setState({isOpen: true})}
           />
         }
       >

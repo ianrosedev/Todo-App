@@ -1,5 +1,5 @@
 /*********************************************
-  !!!NOT For production use!!!!
+  !!! NOT For production use !!!
   Just for the purpose of an example API!
 **********************************************/
 
@@ -786,6 +786,15 @@ app.put('/data/form/edit/sub', (req, res) => {
 
   matchedTask.title = req.body.title;
   matchedTask.body = req.body.body;
+
+  res.json(FAKE_DATA);
+});
+
+app.put('/data/form/edit/profile', (req, res) => {
+  const user = FAKE_DATA.USER_INFO;
+  user.USER_NAME = req.body.name;
+  user.IMAGE = req.body.image;
+  user.SAYING = req.body.saying;
 
   res.json(FAKE_DATA);
 });

@@ -1,13 +1,13 @@
-#expanded-view-modal label {
+#update-task-form label {
   float: left;
   margin-right: 10px;
 }
 
-#expanded-view-modal .close {
+#update-task-form .close {
   color: dimgrey;
 }
 
-#expanded-view-modal.ui.modal > .close {
+#update-task-form.ui.modal > .close {
   top: 1.0535rem;
   right: 1rem;
 }

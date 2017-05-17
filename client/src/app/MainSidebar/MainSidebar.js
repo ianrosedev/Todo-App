@@ -4,7 +4,10 @@ import './MainSidebar.css';
 
 const MainSidebar = (props) => (
   <div id='main-sidebar'>
-    <UserInfo data={props.DATA} />
+    <UserInfo
+      data={props.DATA}
+      editProfile={props.editProfile}
+    />
   </div>
 );
 
