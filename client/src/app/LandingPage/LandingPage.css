@@ -1,0 +1,26 @@
+#landing-page {
+  height: 54vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#segment {
+  background-color: #f0f0f0;
+  padding: 0 160px 20px 160px;
+}
+
+#segment i.list.huge.icon {
+  margin-bottom: 30.5px;
+}
+
+#segment h1 {
+  display: inline-block;
+  font-size: 60px;
+}
+
+#quote {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 30px
+}
