@@ -11,12 +11,13 @@
 }
 
 #segment i.list.huge.icon {
-  margin-bottom: 30.5px;
+  margin-bottom: 32px;
 }
 
 #segment h1 {
   display: inline-block;
   font-size: 60px;
+  margin-left: 3px;
 }
 
 #quote {
