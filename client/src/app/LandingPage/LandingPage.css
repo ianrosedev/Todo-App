@@ -1,15 +1,16 @@
 #landing-page {
-  height: 54vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+  height: 100vh;
 }
 
 #segment {
-  background-color: #f0f0f0;
+  margin-top: -45vh;
   padding: 0 160px 20px 160px;
 }
 
+/*  Aligns the icon to the text  */
 #segment i.list.huge.icon {
   margin-bottom: 32px;
 }
@@ -17,11 +18,11 @@
 #segment h1 {
   display: inline-block;
   font-size: 60px;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 #quote {
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 30px
 }
