@@ -15,10 +15,10 @@ let ID_NUMBER = 0;
 const FAKE_DATA = {
   USER_ID: ID_NUMBER++,
   USER_INFO: {
-    USER_NAME: 'Elliot',
-    IMAGE: 'http://placekitten.com/209/209',
+    USER_NAME: 'Ness',
+    IMAGE: 'https://vignette2.wikia.nocookie.net/earthbound/images/1/1a/Ness_SSB4.png/revision/latest?cb=20141016014557',
     JOINED: 2017,
-    SAYING: 'Do or do not, there is no try.'
+    SAYING: 'Earthbound'
   },
   TASK_LIST: [
     {
