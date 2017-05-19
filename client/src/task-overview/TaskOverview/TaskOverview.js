@@ -3,7 +3,7 @@ import TaskOverviewHeader from '../TaskOverviewHeader/TaskOverviewHeader';
 import TaskOverviewBody from '../TaskOverviewBody/TaskOverviewBody';
 
 const TaskOverview = (props) => (
-  <div id='task-overview'>
+  <div>
     <TaskOverviewHeader addNewTask={props.addNewTask} />
     <TaskOverviewBody
       data={props.data}

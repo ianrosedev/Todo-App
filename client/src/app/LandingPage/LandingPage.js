@@ -17,7 +17,7 @@ class LandingPage extends Component {
               <h1>Todo List</h1>
             </span>
             <span id='quote'>
-              <em>It's easy to keep track of the things you need to get done!</em>
+              <em>Keep track of the things that you need to get done!</em>
             </span>
             <Button
               as={Link}
