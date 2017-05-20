@@ -33,7 +33,7 @@ class Task extends Component {
               (testForHTTP.test(this.props.title)) ?
                 this.props.title :
                 'https://' + this.props.title
-            } target='_blank'>
+            } target='_blank' rel='noopener noreferrer'>
               {this.props.title}
             </a>
           }
