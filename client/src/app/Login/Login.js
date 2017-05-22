@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './LandingPage.css';
+import './Login.css';
 import { Segment, Button, Icon } from 'semantic-ui-react';
 
 class LandingPage extends Component {
   render() {
     return (
-      <div id='landing-page'>
+      <div id='login'>
         <Segment
           id='segment'
           textAlign='center'

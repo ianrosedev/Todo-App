@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import MainHeader from '../MainHeader/MainHeader';
-import LandingPage from '../LandingPage/LandingPage';
+import Login from '../Login/Login';
 import MainContent from '../MainContent/MainContent';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <MainHeader />
         <Switch>
-          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/' component={Login} />
           <Route path='/users' component={MainContent} />
           <Redirect to='/' />
         </Switch>
