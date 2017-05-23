@@ -31,7 +31,7 @@ const TaskList = (props) => {
     );
 
   return (
-    <div id='task-list'>
+    <div>
       {displayTasks}
     </div>
   );

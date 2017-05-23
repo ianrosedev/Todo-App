@@ -17,8 +17,3 @@
 .dropdown #blue {
   color: blue;
 }
-
-/* Makes bottom of dropdown visible */
-div.menu.transition.visible {
-  margin-bottom: 30px;
-}
