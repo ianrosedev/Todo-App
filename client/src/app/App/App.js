@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import MainHeader from '../MainHeader/MainHeader';
 import MainContent from '../MainContent/MainContent';
 import Login from '../Login/Login';
@@ -13,15 +13,17 @@ class App extends Component {
     return (
       <div>
         <MainHeader />
-        <PrivateRoute path='/tasks' component={MainContent} />
-        <Route path='/login' component={Login} />
-        <Route path='/logout' component={Logout} />
-        <Route exact path='/' render={() => (
-          <Redirect to='/login' />
-        )} />
-        <Route render={() => (
-          <h1 style={{textAlign: 'center'}}>Path Not Found!</h1>
-        )} />
+        <Switch>
+          <PrivateRoute path='/tasks' component={MainContent} />
+          <Route path='/login' component={Login} />
+          <Route path='/logout' component={Logout} />
+          <Route exact path='/' render={() => (
+            <Redirect to='/tasks' />
+          )} />
+          <Route render={() => (
+            <h1 style={{textAlign: 'center'}}>Path Not Found!</h1>
+          )} />
+        </Switch>
       </div>
     );
   }
