@@ -9,6 +9,7 @@ import compression from 'compression';
 
 const app = express();
 
+const API_TOKEN = 'D6W69PRgCoDKgHZGJmRUNA';
 let ID_NUMBER = 0;
 
 // Default fake data for example //
@@ -671,6 +672,30 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/data', (req, res) => {
   res.json(FAKE_DATA);
+});
+
+app.get('/api/check_token', (req, res) => {
+  const token = req.query.token;
+
+  if (token) {
+    if (token === API_TOKEN) {
+      return res.json({ valid: true });
+    } else {
+      return res.json({ valid: false });
+    }
+  } else {
+    return res.status(400).json({
+      valid: false,
+      error: 'No token found in `Authorization` header',
+    });
+  }
+});
+
+app.post('/api/login', (req, res) => {
+  res.json({
+    success: true,
+    token: API_TOKEN,
+  })
 });
 
 app.post('/data/form/new', (req, res) => {

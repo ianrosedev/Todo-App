@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { client } from '../../utils/Client';
 import './Login.css';
 import { Segment, Button, Icon } from 'semantic-ui-react';
 
-class LandingPage extends Component {
+class Login extends Component {
+  state = {
+    loginInProgress: false,
+    shouldRedirect: false
+  };
+
+  performLogin = () => {
+    this.setState({ loginInProgress: true });
+    client.login().then(() => (
+      this.setState({ shouldRedirect: true })
+    ));
+  };
+
   render() {
+    if (this.state.shouldRedirect) {
+      return (
+        <Redirect to='/tasks' />
+      );
+    }
     return (
       <div id='login'>
         <Segment
@@ -19,14 +37,23 @@ class LandingPage extends Component {
             <span id='quote'>
               <em>Keep track of the things that you need to get done!</em>
             </span>
-            <Button
-              as={Link}
-              to='/users'
-              color='green'
-              size='large'
-            >
-              Login
-            </Button>
+            {(this.state.loginInProgress) ? (
+              <Button
+                disabled
+                color='green'
+                size='large'
+              >
+                Loading...
+              </Button>
+            ) : (
+              <Button
+                color='green'
+                size='large'
+                onClick={this.performLogin}
+              >
+                Login
+              </Button>
+            )}
           </div>
         </Segment>
       </div>
@@ -34,4 +61,4 @@ class LandingPage extends Component {
   }
 };
 
-export default LandingPage;
+export default Login;
