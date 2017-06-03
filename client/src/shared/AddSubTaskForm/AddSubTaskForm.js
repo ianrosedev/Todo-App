@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './AddSubTaskForm.css';
 import { Modal, Button, Icon, Form, TextArea } from 'semantic-ui-react';
 
-class addSubTaskForm extends Component {
+const propTypes = {
+  _id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  addSubTask: PropTypes.func.isRequired
+};
+
+class AddSubTaskForm extends Component {
   state = {
     isOpen: false,
-    id: this.props.id,
     taskTitle: '',
     taskBody: ''
   };
+
+  title = this.props.name.slice(0, -1);
 
   handleInputChange = (e) => {
     this.setState({
@@ -25,7 +33,7 @@ class addSubTaskForm extends Component {
 
     this.handleAddSubTask({
       id: this.props._id,
-      name: this.props.content.toUpperCase() + 'S',
+      name: this.title.toUpperCase() + 'S',
       taskTitle: this.state.taskTitle,
       taskBody: this.state.taskBody
     });
@@ -51,7 +59,7 @@ class addSubTaskForm extends Component {
         trigger={
           <Button
             color='green'
-            content={this.props.content}
+            content={this.title}
             icon='plus'
             labelPosition='left'
             onClick={() => this.setState({isOpen: true})}
@@ -59,24 +67,24 @@ class addSubTaskForm extends Component {
         }
       >
         <Modal.Header>
-          New {this.props.content}
+          New {this.title}
         </Modal.Header>
         <Modal.Content>
           <Modal.Description>
             <Form onSubmit={this.handleSubmit}>
               <Form.Field>
-                <label><h4>{this.props.content}:</h4></label>
+                <label><h4>{this.title}:</h4></label>
                 <input
                   type='text'
                   name='taskTitle'
                   value={this.state.taskTitle}
                   onChange={this.handleInputChange}
-                  placeholder={`Your ${this.props.content}`}
+                  placeholder={`Your ${this.title}`}
                   required={true}
                 />
               </Form.Field>
               <Form.Field>
-                <label><h4>About your {this.props.content}:</h4></label>
+                <label><h4>About your {this.title}:</h4></label>
                 <TextArea
                   type='text'
                   name='taskBody'
@@ -100,4 +108,6 @@ class addSubTaskForm extends Component {
   }
 };
 
-export default addSubTaskForm;
+AddSubTaskForm.propTypes = propTypes;
+
+export default AddSubTaskForm;

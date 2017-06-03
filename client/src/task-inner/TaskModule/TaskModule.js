@@ -32,9 +32,10 @@ const TaskModule = (props) => {
   return (
     <Segment.Group>
       <TaskHeader
+        _id={props._id}
         name={props.data[0].name}
         icon={props.data[0].icon}
-        {...props}
+        addSubTask={props.addSubTask}
       />
       <Segment.Group>
         {tasks}

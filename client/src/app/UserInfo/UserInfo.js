@@ -1,6 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import UpdateProfileForm from '../../shared/UpdateProfileForm/UpdateProfileForm';
 import { Card, Image } from 'semantic-ui-react';
+
+const propTypes = {
+  data: PropTypes.shape({
+    IMAGE: PropTypes.string.isRequired,
+    USER_NAME: PropTypes.string.isRequired,
+    JOINED: PropTypes.number.isRequired,
+    SAYING: PropTypes.string.isRequired,
+  })
+};
 
 const UserInfo = (props) => {
   return (
@@ -8,7 +18,7 @@ const UserInfo = (props) => {
       <Image
         src={props.data.IMAGE}
         width={209}
-        height={209} 
+        height={209}
       />
       <Card.Content>
         <Card.Header>
@@ -32,5 +42,7 @@ const UserInfo = (props) => {
     </Card>
   );
 };
+
+UserInfo.propTypes = propTypes;
 
 export default UserInfo;

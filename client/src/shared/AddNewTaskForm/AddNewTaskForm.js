@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
 import './AddNewTaskForm.css';
 import { Modal, Button, Form, Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  addNewTask: PropTypes.func.isRequired
+};
 
 class AddNewTaskForm extends Component {
   state = {
@@ -118,5 +123,7 @@ class AddNewTaskForm extends Component {
     );
   }
 };
+
+AddNewTaskForm.propTypes = propTypes;
 
 export default AddNewTaskForm;
