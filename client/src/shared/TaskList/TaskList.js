@@ -1,6 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TaskDescription from '../TaskDescription/TaskDescription';
 import { Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  data: PropTypes.array.isRequired
+};
 
 const TaskList = (props) => {
   const tasksSortedByImportance = props.data.sort((a, b) => (
@@ -13,7 +18,10 @@ const TaskList = (props) => {
       key={task.TASK_ID}
       color={task.IMPORTANCE.COLOR}
       task={task.TASK_NAME}
-      {...props}
+      changeTaskImportance={props.changeTaskImportance}
+      editTask={props.editTask}
+      deleteTask={props.deleteTask}
+      viewTaskBody={props.viewTaskBody}
     />
   ));
 
@@ -36,5 +44,7 @@ const TaskList = (props) => {
     </div>
   );
 };
+
+TaskList.propTypes = propTypes;
 
 export default TaskList;

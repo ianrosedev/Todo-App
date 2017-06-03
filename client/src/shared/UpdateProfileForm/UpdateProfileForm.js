@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './UpdateProfileForm.css';
 import { Modal, Button, Icon, Form } from 'semantic-ui-react';
+
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  saying: PropTypes.string.isRequired,
+  editProfile: PropTypes.func.isRequired
+};
 
 class UpdateProfileForm extends Component {
   state = {
@@ -108,5 +116,7 @@ class UpdateProfileForm extends Component {
     );
   }
 };
+
+UpdateProfileForm.propTypes = propTypes;
 
 export default UpdateProfileForm;

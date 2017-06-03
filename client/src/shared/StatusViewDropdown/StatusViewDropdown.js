@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Dropdown } from 'semantic-ui-react';
+
+const propTypes = {
+  status: PropTypes.string.isRequired,
+  updateStatusView: PropTypes.func.isRequired
+};
 
 class StatusViewDropdown extends Component {
   handleUpdateStatusView = (status) => (
@@ -32,5 +38,7 @@ class StatusViewDropdown extends Component {
     );
   }
 };
+
+StatusViewDropdown.propTypes = propTypes;
 
 export default StatusViewDropdown;

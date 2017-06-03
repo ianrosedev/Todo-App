@@ -4,7 +4,7 @@ import TaskInnerBody from '../TaskInnerBody/TaskInnerBody';
 import './TaskInner.css';
 
 class TaskInner extends Component {
-  state = {status: 'OPEN'};
+  state = { status: 'OPEN' };
 
   updateStatusView = (newStatus) => (
     this.setState({status: newStatus})

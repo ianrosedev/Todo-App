@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import StatusViewDropdown from '../../shared/StatusViewDropdown/StatusViewDropdown';
 import ConfirmDelete from '../../shared/ConfirmDelete/ConfirmDelete';
 import './TaskInnerHeader.css'
 import { Menu, Button } from 'semantic-ui-react';
+
+const propTypes = {
+  _id: PropTypes.number.isRequired,
+  taskName: PropTypes.string.isRequired,
+  goBackHome: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired
+};
 
 class TaskInnerHeader extends Component {
   handleGoBackHome = () => (
@@ -43,5 +51,7 @@ class TaskInnerHeader extends Component {
     );
   }
 };
+
+TaskInnerHeader.propTypes = propTypes;
 
 export default TaskInnerHeader;

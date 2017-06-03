@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ExpandedViewModal from '../../shared/ExpandedViewModal/ExpandedViewModal';
 import UpdateSubTaskForm from '../../shared/UpdateSubTaskForm/UpdateSubTaskForm';
 import ConfirmDelete from '../../shared/ConfirmDelete/ConfirmDelete';
 import './Task.css';
 import { Segment, Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  _id: PropTypes.number.isRequired,
+  subId: PropTypes.number.isRequired,
+  taskType: PropTypes.string.isRequired,
+  taskTitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  deleteSubTask: PropTypes.func.isRequired,
+  subTaskCompleted: PropTypes.func.isRequired
+};
 
 class Task extends Component {
   handleDeleteSubTask = () => (
@@ -24,7 +36,10 @@ class Task extends Component {
 
     return (
       <Segment id='task'>
-        <ExpandedViewModal {...this.props} />
+        <ExpandedViewModal
+          title={this.props.title}
+          body={this.props.body}
+        />
         <strong>
           {
             (this.props.taskType !== 'WEBSITES') ?
@@ -51,7 +66,6 @@ class Task extends Component {
           taskTitle={this.props.taskTitle}
           title={this.props.title}
           body={this.props.body}
-          color={this.props.color}
           editSubTask={this.props.editSubTask}
         />
         <hr />
@@ -60,5 +74,7 @@ class Task extends Component {
     );
   }
 };
+
+Task.propTypes = propTypes;
 
 export default Task;

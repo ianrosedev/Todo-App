@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
 import UpdateTaskForm from '../../shared/UpdateTaskForm/UpdateTaskForm';
 import ConfirmDelete from '../../shared/ConfirmDelete/ConfirmDelete';
 import './TaskDescription.css';
 import { Segment, Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  _id: PropTypes.number.isRequired,
+  task: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  viewTaskBody: PropTypes.func.isRequired,
+  changeTaskImportance: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired
+};
 
 class TaskDescription extends Component {
   handleViewTaskBody = () => (
@@ -50,5 +60,7 @@ class TaskDescription extends Component {
     );
   }
 };
+
+TaskDescription.propTypes = propTypes;
 
 export default TaskDescription;

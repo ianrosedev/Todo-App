@@ -1,6 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AddSubTaskForm from '../../shared/AddSubTaskForm/AddSubTaskForm';
 import { Segment,  Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
+};
 
 const TaskHeader = (props) => (
   <Segment>
@@ -13,5 +19,7 @@ const TaskHeader = (props) => (
     />
   </Segment>
 );
+
+TaskHeader.propTypes = propTypes;
 
 export default TaskHeader;

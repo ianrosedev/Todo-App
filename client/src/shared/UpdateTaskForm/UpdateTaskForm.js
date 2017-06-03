@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ImportanceDropdown from '../../shared/ImportanceDropdown/ImportanceDropdown';
 import './UpdateTaskForm.css';
 import { Modal, Button, Form, Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  _id: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired,
+  taskTitle: PropTypes.string.isRequired,
+  editTask: PropTypes.func.isRequired
+};
 
 class UpdateTaskForm extends Component {
   colors = ['black', 'red', 'orange', 'green', 'blue'];
@@ -111,5 +119,7 @@ class UpdateTaskForm extends Component {
     );
   }
 };
+
+UpdateTaskForm.propTypes = propTypes;
 
 export default UpdateTaskForm;

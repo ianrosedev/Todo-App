@@ -1,7 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TaskHeader from '../TaskHeader/TaskHeader';
 import Task from '../Task/Task';
 import { Segment } from 'semantic-ui-react';
+
+const propTypes = {
+  data: PropTypes.array.isRequired,
+  status: PropTypes.string.isRequired
+};
 
 const TaskModule = (props) => {
   const tasks = props.data
@@ -43,5 +49,7 @@ const TaskModule = (props) => {
     </Segment.Group>
   );
 };
+
+TaskModule.propTypes = propTypes;
 
 export default TaskModule;

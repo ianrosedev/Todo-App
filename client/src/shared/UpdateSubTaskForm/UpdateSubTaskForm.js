@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './UpdateSubTaskForm.css';
 import { Modal, Button, Icon, Form, TextArea } from 'semantic-ui-react';
+
+const propTypes = {
+  _id: PropTypes.number.isRequired,
+  subId: PropTypes.number.isRequired,
+  taskTitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  editSubTask: PropTypes.func.isRequired
+};
 
 class UpdateSubTaskForm extends Component {
   colors = ['black', 'red', 'orange', 'green', 'blue'];
@@ -94,5 +104,7 @@ class UpdateSubTaskForm extends Component {
     );
   }
 };
+
+UpdateSubTaskForm.propTypes = propTypes;
 
 export default UpdateSubTaskForm;

@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Confirm } from 'semantic-ui-react';
+
+const propTypes = {
+  children: PropTypes.element.isRequired,
+  handleDelete: PropTypes.func.isRequired
+};
 
 class ConfirmDelete extends Component {
   state = { isOpen: false };
@@ -34,5 +40,7 @@ class ConfirmDelete extends Component {
     );
   }
 };
+
+ConfirmDelete.propTypes = propTypes;
 
 export default ConfirmDelete;

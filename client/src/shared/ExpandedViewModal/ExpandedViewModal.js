@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ExpandedViewModal.css';
 import { Modal, Icon } from 'semantic-ui-react';
+
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string
+};
 
 class ExpandedViewModal extends Component {
   state = {
@@ -39,5 +45,7 @@ class ExpandedViewModal extends Component {
     );
   }
 };
+
+ExpandedViewModal.propTypes = propTypes;
 
 export default ExpandedViewModal;
