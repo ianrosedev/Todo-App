@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import MainContent from './MainContent';
 
-describe('App', () => {
+describe('MainContent', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<MainContent />);
   });
 
   it('renders without crashing', () => {

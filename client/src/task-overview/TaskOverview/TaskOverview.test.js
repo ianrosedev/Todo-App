@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import TaskOverview from './TaskOverview';
 
-describe('App', () => {
+describe('TaskOverview', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<TaskOverview />);
   });
 
   it('renders without crashing', () => {

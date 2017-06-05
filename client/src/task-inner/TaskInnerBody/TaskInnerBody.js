@@ -9,9 +9,9 @@ const TaskInnerBody = (props) => {
     <TaskModule
       key={props._id + i}
       _id={props._id}
+      data={props.data[item]}
       status={props.status}
       taskTitle={item}
-      data={props.data[item]}
       taskType={item}
       addSubTask={props.addSubTask}
       deleteSubTask={props.deleteSubTask}

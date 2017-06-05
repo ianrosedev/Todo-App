@@ -8,7 +8,7 @@ const propTypes = {
     IMAGE: PropTypes.string.isRequired,
     USER_NAME: PropTypes.string.isRequired,
     JOINED: PropTypes.number.isRequired,
-    SAYING: PropTypes.string.isRequired,
+    SAYING: PropTypes.string.isRequired
   })
 };
 

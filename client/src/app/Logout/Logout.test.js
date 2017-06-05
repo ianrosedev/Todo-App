@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import Logout from './Logout';
 
-describe('App', () => {
+describe('Logout', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<Logout />);
   });
 
   it('renders without crashing', () => {

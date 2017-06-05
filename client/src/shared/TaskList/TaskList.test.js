@@ -1,12 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import TaskList from './TaskList';
 
-describe('App', () => {
+describe('TaskList', () => {
+  const testProps = {
+    data: []
+  };
+
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<TaskList {...testProps} />);
   });
 
   it('renders without crashing', () => {
