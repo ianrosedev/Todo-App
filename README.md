@@ -56,7 +56,7 @@ On the main screen you will see your tasks arranged by importance. That importan
 
 Clicking on a task name will take you into the task body. Each task allows you to keep track of issues, questions, notes and websites. You can add, edit, delete or mark as completed your sub-tasks. The default is to only show 'open' tasks, but you can also show only  'completed' or 'all ' of your sub-tasks. You can delete the entire task or go back to the main page.
 
-## Liscense
+## License
 ### Internet Systems Consortium license
 
 
