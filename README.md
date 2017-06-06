@@ -4,10 +4,15 @@ Keep track of the things that you need to do with an easy to use interface.
 *Note: The repo is 'Todo-App' but the app itself is 'Todo List'.*
 
 ## Installation
-From the ```root``` directory:
+To download:
+```
+git clone https://github.com/ianrosedev/Todo-App.git
+```
+Then from the ```root``` directory:
 ```
 npm run install-all
 ```
+The app and all dependencies will now be installed, the app is ready to go!
 
 ## Starting the App
 From the ```root``` directory:
