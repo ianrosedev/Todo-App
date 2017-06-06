@@ -12,7 +12,7 @@ Then from the ```root``` directory:
 ```
 npm run install-all
 ```
-The app and all dependencies will now be installed, the app is ready to go!
+The app and all dependencies will now be installed. The app is ready to go!
 
 ## Starting the App
 From the ```root``` directory:
