@@ -28,7 +28,7 @@ Test the whole app:
 ```
 npm test  
 ```
-Test an individual compont:
+Test an individual component:
 ```
 npm test -- [ComponentToTest].test.js
 ```
