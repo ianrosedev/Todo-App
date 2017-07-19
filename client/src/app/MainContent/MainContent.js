@@ -141,13 +141,6 @@ class MainContent extends Component {
     this.setState({DATA: data});
   };
 
-  componentDidMount = async () => {
-    const response = await fetch('/data');
-    const data = await response.json();
-
-    this.setState({DATA: data});
-  }
-
   viewTaskBody = (id) => {
     this.setState({
       isOverviewVisible: false,
@@ -160,6 +153,13 @@ class MainContent extends Component {
       isOverviewVisible: true
     })
   );
+
+  componentDidMount = async () => {
+    const response = await fetch('/data');
+    const data = await response.json();
+
+    this.setState({DATA: data});
+  }
 
   render() {
     if (!this.state.DATA) {
