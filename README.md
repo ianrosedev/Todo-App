@@ -4,6 +4,8 @@ Keep track of the things that you need to do with an easy to use interface.
 *Note: The repo is 'Todo-App' but the app itself is 'Todo List'.*
 
 ## Installation
+**You’ll need to have Node >= 6 on your machine.**
+
 To download:
 ```
 git clone https://github.com/ianrosedev/Todo-App.git
